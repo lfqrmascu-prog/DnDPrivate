@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     
-    // URL de la API de D&D 5e para razas
-    const speciesUrl = 'https://www.dnd5eapi.co/api/races';
+    // URL de tu archivo races.json en GitHub
+    const speciesUrl = 'https://raw.githubusercontent.com/lfqrmascu-prog/DnDPrivate/main/data/races.json'; 
 
     // --- Funciones principales ---
     function showScreen(screenId) {
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            allSpecies = data.results.sort((a, b) => a.name.localeCompare(b.name));
+            allSpecies = data.race.sort((a, b) => a.name.localeCompare(b.name));
             displaySpecies(allSpecies);
         } catch (error) {
             console.error("Error al obtener los datos de especies:", error);
