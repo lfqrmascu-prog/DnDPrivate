@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D 5e App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="welcome-screen" class="screen active">
+        <main class="welcome-screen-content">
+            <h1 id="welcome-title">Welcome<br>Adventurer!</h1>
+            <div class="menu-container">
+                <div class="menu-options">
+                    <button id="search-btn">Search</button>
+                    <button id="create-btn">Create Character</button>
+                    <button id="manage-btn">Manage Characters</button>
+                </div>
+                <button id="language-btn-welcome" class="language-btn-style">
+                    <img src="assets/es-flag.png" alt="Switch to Spanish" id="flag-img-welcome">
+                </button>
+            </div>
+        </main>
+    </section>
+
+    <section id="search-screen" class="screen">
+        <main class="search-screen-content">
+            <h1 id="search-title">Search</h1>
+            <div class="menu-sections">
+                <section class="menu-section">
+                    <h2>Players</h2>
+                    <div class="menu-grid">
+                        <button class="menu-btn" data-lang="species">Species</button>
+                        <button class="menu-btn" data-lang="classes">Classes</button>
+                        <button class="menu-btn" data-lang="feats">Feats</button>
+                        <button class="menu-btn" data-lang="options-features">Options & Features</button>
+                        <button class="menu-btn" data-lang="backgrounds">Backgrounds</button>
+                        <button class="menu-btn" data-lang="items">Items</button>
+                        <button class="menu-btn" data-lang="spells">Spells</button>
+                    </div>
+                </section>
+                <section class="menu-section">
+                    <h2>Rules</h2>
+                    <div class="menu-grid">
+                        <button class="menu-btn" data-lang="adventures">Adventures</button>
+                        <button class="menu-btn" data-lang="books">Books</button>
+                        <button class="menu-btn" data-lang="rules-glossary">Rules Glossary</button>
+                        <button class="menu-btn" data-lang="conditions">Conditions</button>
+                    </div>
+                </section>
+                <section class="menu-section">
+                    <h2>Dungeon Masters</h2>
+                    <div class="menu-grid">
+                        <button class="menu-btn" data-lang="dm-options">DM Options</button>
+                    </div>
+                </section>
+            </div>
+            <button id="back-btn">Back</button>
+            <button id="language-btn-search" class="language-btn-style">
+                <img src="assets/es-flag.png" alt="Switch to Spanish" id="flag-img-search">
+            </button>
+        </main>
+    </section>
+    
+    <section id="species-screen" class="screen">
+        <main class="species-screen-content">
+            <button id="back-to-search-btn" class="back-btn">Back to Search</button>
+            <h1 id="species-title" class="section-title">Species</h1>
+            <div class="filter-container">
+                <input type="text" id="species-filter-input" placeholder="Filter species...">
+            </div>
+            <div id="species-list-container" class="list-container">
+                </div>
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
