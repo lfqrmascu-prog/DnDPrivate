@@ -163,12 +163,12 @@ button:hover {
     box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Estilos para la Pantalla de Especies --- */
+/* --- Estilos para la Pantalla Genérica de Contenido --- */
 .filter-container {
     margin-bottom: 1em;
 }
 
-#species-filter-input {
+#content-filter-input {
     width: 80%;
     font-family: 'IM Fell English SC', serif;
     font-size: 1em;
@@ -179,14 +179,14 @@ button:hover {
     color: #e0d5a3;
 }
 
-#species-list-container {
+#content-list-container {
     display: flex;
     flex-direction: column;
     gap: 0.5em;
     margin-top: 1em;
 }
 
-.species-item {
+.content-item {
     font-family: 'IM Fell English SC', serif;
     font-size: 1em;
     padding: 0.8em 1.2em;
@@ -201,20 +201,6 @@ button:hover {
     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
-.species-item:hover {
+.content-item:hover {
     background-color: #4f4f4f;
-}
-
-.back-btn {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-family: inherit;
-    font-size: 0.7em;
-    padding: 0.5em 0.8em;
-    border: 2px solid #6b5c47;
-    border-radius: 10px;
-    background-color: #3d3d3d;
-    color: #e0d5a3;
-    cursor: pointer;
 }
