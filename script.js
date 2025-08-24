@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBtn = document.getElementById('search-btn');
     const createBtn = document.getElementById('create-btn');
     const manageBtn = document.getElementById('manage-btn');
-    const backBtn = document.getElementById('back-btn');
+    const backBtn = document = document.getElementById('back-btn');
     const backToSearchBtn = document.getElementById('back-to-search-btn');
     const menuBtns = document.querySelectorAll('.menu-btn');
     const contentListContainer = document.getElementById('content-list-container');
