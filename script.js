@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchTitle = document.getElementById('search-title');
     const contentTitle = document.getElementById('content-title');
     const searchBtn = document.getElementById('search-btn');
-    const createBtn = document.getElementById('create-btn');
+    const createBtn = document = document.getElementById('create-btn');
     const manageBtn = document.getElementById('manage-btn');
     const backBtn = document = document.getElementById('back-btn');
     const backToSearchBtn = document.getElementById('back-to-search-btn');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'races': { file: 'races.json', key: 'race', name: {en: "Species", es: "Especies"} },
         'classes': { file: 'classes.json', key: 'class', name: {en: "Classes", es: "Clases"} },
         'feats': { file: 'feats.json', key: 'feat', name: {en: "Feats", es: "Dotes"} },
-        'options-features': { file: 'classfeatures.json', key: 'classFeature', name: {en: "Options & Features", es: "Opciones y Rasgos"} },
+        'options-features': { file: 'optionalfeatures.json', key: 'optionalfeature', name: {en: "Options & Features", es: "Opciones y Rasgos"} },
         'backgrounds': { file: 'backgrounds.json', key: 'background', name: {en: "Backgrounds", es: "Trasfondos"} },
         'items': { file: 'items.json', key: 'item', name: {en: "Items", es: "Objetos"} },
         'spells-phb': { file: 'spells-phb.json', key: 'spell', name: {en: "Spells", es: "Conjuros"} }
