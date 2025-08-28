@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLang = 'en';
     let allContent = [];
     let currentDataType = '';
-    
+
     // --- URL base de tu repositorio en GitHub ---
     const baseUrl = 'https://raw.githubusercontent.com/lfqrmascu-prog/DnDPrivate/main/data/';
 
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'races': { file: 'races.json', key: 'race', name: {en: "Species", es: "Especies"} },
         'classes': { file: 'classes.json', key: 'class', name: {en: "Classes", es: "Clases"} },
         'feats': { file: 'feats.json', key: 'feat', name: {en: "Feats", es: "Dotes"} },
-        'options-features': { file: 'classfeatures.json', key: 'classFeature', name: {en: "Options & Features", es: "Opciones y Rasgos"} },
+        'options-features': { file: 'optionalfeatures.json', key: 'optionalfeature', name: {en: "Options & Features", es: "Opciones y Rasgos"} },
         'backgrounds': { file: 'backgrounds.json', key: 'background', name: {en: "Backgrounds", es: "Trasfondos"} },
         'items': { file: 'items.json', key: 'item', name: {en: "Items", es: "Objetos"} },
         'spells-phb': { file: 'spells-phb.json', key: 'spell', name: {en: "Spells", es: "Conjuros"} }
@@ -97,6 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (screenId === 'welcome-screen') {
             welcomeTitle.innerHTML = lang.titles.welcome;
             searchBtn.textContent = lang.mainMenu.search;
+            createBtn.textContent = lang.mainMenu.create;
+            manageBtn.textContent = lang.mainMenu.manage;
             document.getElementById('flag-img-welcome').src = lang.flagSrc;
             document.getElementById('flag-img-welcome').alt = lang.flagAlt;
         } 
@@ -175,27 +177,18 @@ document.addEventListener('DOMContentLoaded', () => {
         detailTitle.textContent = item.name;
         detailContainer.innerHTML = '';
         
-        const lang = translations[currentLang];
-        const itemKeys = Object.keys(item);
-        
-        itemKeys.forEach(key => {
-            if (key !== 'name' && key !== 'source' && key !== 'subraces' && key !== 'entries' && key !== 'page') {
-                const detailItem = document.createElement('div');
-                detailItem.className = 'detail-item';
-                detailItem.innerHTML = `
-                    <h3>${key.charAt(0).toUpperCase() + key.slice(1)}</h3>
-                    <p>${item[key]}</p>
-                `;
-                detailContainer.appendChild(detailItem);
-            }
-        });
-        
-        if (item.entries) {
+        // Muestra la información de 'entries' si existe
+        if (item.entries && Array.isArray(item.entries)) {
             item.entries.forEach(entry => {
-                const entryElement = document.createElement('div');
-                entryElement.className = 'detail-item';
-                entryElement.innerHTML = `<h3>${entry.name}</h3><p>${entry.entries.join(' ')}</p>`;
-                detailContainer.appendChild(entryElement);
+                if (entry.name && entry.entries) {
+                    const entryElement = document.createElement('div');
+                    entryElement.className = 'detail-item';
+                    entryElement.innerHTML = `
+                        <h3>${entry.name}</h3>
+                        <p>${entry.entries.join(' ')}</p>
+                    `;
+                    detailContainer.appendChild(entryElement);
+                }
             });
         }
     }
