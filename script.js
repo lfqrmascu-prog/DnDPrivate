@@ -3,19 +3,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const welcomeScreen = document.getElementById('welcome-screen');
     const searchScreen = document.getElementById('search-screen');
     const contentScreen = document.getElementById('content-screen');
+    const detailScreen = document.getElementById('detail-screen');
+
     const languageBtnWelcome = document.getElementById('language-btn-welcome');
     const languageBtnSearch = document.getElementById('language-btn-search');
+    
     const welcomeTitle = document.getElementById('welcome-title');
     const searchTitle = document.getElementById('search-title');
     const contentTitle = document.getElementById('content-title');
+    const detailTitle = document.getElementById('detail-title');
+
     const searchBtn = document.getElementById('search-btn');
     const createBtn = document.getElementById('create-btn');
     const manageBtn = document.getElementById('manage-btn');
     const backBtn = document.getElementById('back-btn');
     const backToSearchBtn = document.getElementById('back-to-search-btn');
+    const backToContentBtn = document.getElementById('back-to-content-btn');
+
     const menuBtns = document.querySelectorAll('.menu-btn');
     const contentListContainer = document.getElementById('content-list-container');
     const contentFilterInput = document.getElementById('content-filter-input');
+    const detailContainer = document.getElementById('detail-container');
     
     // --- Variables de estado de la aplicación ---
     let currentLang = 'en';
@@ -30,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'races': { file: 'races.json', key: 'race', name: {en: "Species", es: "Especies"} },
         'classes': { file: 'classes.json', key: 'class', name: {en: "Classes", es: "Clases"} },
         'feats': { file: 'feats.json', key: 'feat', name: {en: "Feats", es: "Dotes"} },
-        'options-features': { file: 'optionalfeatures.json', key: 'optionalfeature', name: {en: "Options & Features", es: "Opciones y Rasgos"} },
+        'options-features': { file: 'classfeatures.json', key: 'classFeature', name: {en: "Options & Features", es: "Opciones y Rasgos"} },
         'backgrounds': { file: 'backgrounds.json', key: 'background', name: {en: "Backgrounds", es: "Trasfondos"} },
         'items': { file: 'items.json', key: 'item', name: {en: "Items", es: "Objetos"} },
         'spells-phb': { file: 'spells-phb.json', key: 'spell', name: {en: "Spells", es: "Conjuros"} }
@@ -39,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Traducciones ---
     const translations = {
         en: {
-            titles: { welcome: "Welcome<br>Adventurer!", search: "Search" },
+            titles: { welcome: "Welcome<br>Adventurer!", search: "Search", detail: "Detail" },
             mainMenu: { search: "Search", create: "Create Character", manage: "Manage Characters" },
             searchMenu: {
                 'races': "Species", 'classes': "Classes", 'feats': "Feats",
@@ -49,13 +57,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 'dm-options': "DM Options"
             },
             back: "Back",
+            backToSearch: "Back to Search",
             flagSrc: "assets/es-flag.png",
             flagAlt: "Switch to Spanish",
             filterPlaceholder: (type) => `Filter ${type}...`,
             noResults: "No results found."
         },
         es: {
-            titles: { welcome: "¡Bienvenido<br>Aventurero!", search: "Buscar" },
+            titles: { welcome: "¡Bienvenido<br>Aventurero!", search: "Buscar", detail: "Detalle" },
             mainMenu: { search: "Buscar", create: "Crear Personaje", manage: "Gestionar Personajes" },
             searchMenu: {
                 'races': "Especies", 'classes': "Clases", 'feats': "Dotes",
@@ -65,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'dm-options': "Opciones de DM"
             },
             back: "Volver",
+            backToSearch: "Volver a la búsqueda",
             flagSrc: "assets/en-flag.png",
             flagAlt: "Switch to English",
             filterPlaceholder: (type) => `Filtrar ${type}...`,
@@ -103,12 +113,16 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (screenId === 'content-screen') {
             const translatedKey = lang.searchMenu[currentDataType] || currentDataType;
             contentTitle.textContent = translatedKey;
-            backToSearchBtn.textContent = lang.back;
+            backToSearchBtn.textContent = lang.backToSearch;
             const placeholder = lang.filterPlaceholder(translatedKey.toLowerCase());
             contentFilterInput.placeholder = placeholder;
             if (allContent.length > 0) {
                 displayContent(allContent);
             }
+        }
+        else if (screenId === 'detail-screen') {
+            detailTitle.textContent = lang.titles.detail;
+            backToContentBtn.textContent = lang.back;
         }
     }
 
@@ -149,8 +163,41 @@ document.addEventListener('DOMContentLoaded', () => {
             const itemElement = document.createElement('button');
             itemElement.className = 'content-item';
             itemElement.textContent = item.name;
+            itemElement.addEventListener('click', () => {
+                showDetail(item);
+            });
             contentListContainer.appendChild(itemElement);
         });
+    }
+    
+    function showDetail(item) {
+        showScreen('detail-screen');
+        detailTitle.textContent = item.name;
+        detailContainer.innerHTML = '';
+        
+        const lang = translations[currentLang];
+        const itemKeys = Object.keys(item);
+        
+        itemKeys.forEach(key => {
+            if (key !== 'name' && key !== 'source' && key !== 'subraces' && key !== 'entries' && key !== 'page') {
+                const detailItem = document.createElement('div');
+                detailItem.className = 'detail-item';
+                detailItem.innerHTML = `
+                    <h3>${key.charAt(0).toUpperCase() + key.slice(1)}</h3>
+                    <p>${item[key]}</p>
+                `;
+                detailContainer.appendChild(detailItem);
+            }
+        });
+        
+        if (item.entries) {
+            item.entries.forEach(entry => {
+                const entryElement = document.createElement('div');
+                entryElement.className = 'detail-item';
+                entryElement.innerHTML = `<h3>${entry.name}</h3><p>${entry.entries.join(' ')}</p>`;
+                detailContainer.appendChild(entryElement);
+            });
+        }
     }
 
     function filterContent() {
@@ -163,6 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
     searchBtn.addEventListener('click', () => showScreen('search-screen'));
     backBtn.addEventListener('click', () => showScreen('welcome-screen'));
     backToSearchBtn.addEventListener('click', () => showScreen('search-screen'));
+    backToContentBtn.addEventListener('click', () => showScreen('content-screen'));
     
     menuBtns.forEach(button => {
         button.addEventListener('click', () => {
