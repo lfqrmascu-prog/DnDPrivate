@@ -182,14 +182,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function cleanEntryText(text) {
         if (typeof text !== 'string') return text;
         
-        return text.replace(/{@(.*?)}/g, (match, p1) => {
+        // Expresión regular más robusta para encontrar y eliminar todas las etiquetas {@...}
+        let cleanedText = text.replace(/\{@(.*?)}/g, (match, p1) => {
             const parts = p1.split('|');
-            const tag = parts[0].toLowerCase();
-            const textToDisplay = parts[1] || parts[0];
-            const dataAttrs = `data-tag="${tag}" data-name="${textToDisplay}"`;
-
-            return `<span class="detail-link" ${dataAttrs}>${textToDisplay}</span>`;
+            return parts[1] || parts[0];
         });
+
+        return cleanedText.replace(/<br>/g, '<br>');
     }
 
     function showDetail(item) {
@@ -203,61 +202,44 @@ document.addEventListener('DOMContentLoaded', () => {
         if (item.prerequisite) {
             const prerequisiteElement = document.createElement('div');
             prerequisiteElement.className = 'detail-item';
-            prerequisiteElement.innerHTML = `
-                <h3>${labels.prerequisite}</h3>
-                <p>${cleanEntryText(JSON.stringify(item.prerequisite))}</p>
-            `;
+            prerequisiteElement.innerHTML = `<h3>${labels.prerequisite}</h3><p>${cleanEntryText(JSON.stringify(item.prerequisite))}</p>`;
             detailContainer.appendChild(prerequisiteElement);
         }
 
         if (item.entries && Array.isArray(item.entries)) {
+            const entriesContainer = document.createElement('div');
+            entriesContainer.className = 'detail-item';
+            entriesContainer.innerHTML = `<h3>${labels.entries}</h3>`;
+
             item.entries.forEach(entry => {
-                const entryElement = document.createElement('div');
-                entryElement.className = 'detail-item';
-                let entryText = '';
-
-                if (entry.name) {
-                    entryText += `<h3>${entry.name}</h3>`;
+                if (typeof entry === 'string') {
+                    entriesContainer.innerHTML += `<p>${cleanEntryText(entry)}</p>`;
+                } else if (typeof entry === 'object' && entry !== null) {
+                    if (entry.name && entry.entries) {
+                        entriesContainer.innerHTML += `<h4>${cleanEntryText(entry.name)}</h4>`;
+                        if (Array.isArray(entry.entries)) {
+                            entriesContainer.innerHTML += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
+                        } else {
+                            entriesContainer.innerHTML += `<p>${cleanEntryText(entry.entries)}</p>`;
+                        }
+                    } else if (entry.entries && Array.isArray(entry.entries)) {
+                        entriesContainer.innerHTML += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
+                    }
                 }
-
-                if (entry.entries && Array.isArray(entry.entries)) {
-                    entryText += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
-                } else if (typeof entry.entries === 'string') {
-                    entryText += `<p>${cleanEntryText(entry.entries)}</p>`;
-                } else if (typeof entry === 'string') {
-                    entryText += `<p>${cleanEntryText(entry)}</p>`;
-                }
-
-                entryElement.innerHTML = entryText;
-                detailContainer.appendChild(entryElement);
             });
+            detailContainer.appendChild(entriesContainer);
         }
 
         if (item.source || item.page) {
             const sourceElement = document.createElement('div');
             sourceElement.className = 'detail-item';
-            sourceElement.innerHTML = `
-                <h3>${labels.source}</h3>
-                <p>${item.source || 'N/A'}${item.page ? `, ${labels.page}: ${item.page}` : ''}</p>
-            `;
+            sourceElement.innerHTML = `<h3>${labels.source}</h3><p>${item.source || 'N/A'}${item.page ? `, ${labels.page}: ${item.page}` : ''}</p>`;
             detailContainer.appendChild(sourceElement);
         }
     
         if (!item.prerequisite && !item.entries && !item.source) {
             detailContainer.innerHTML = `<p>No se encontraron detalles para ${item.name}.</p>`;
         }
-    
-        // Añadir evento de clic a los nuevos enlaces
-        detailContainer.querySelectorAll('.detail-link').forEach(link => {
-            link.addEventListener('click', (event) => {
-                // Aquí iría la lógica para buscar y mostrar el nuevo item
-                const tag = event.target.dataset.tag;
-                const name = event.target.dataset.name;
-                // Por ahora, solo lo mostraremos en la consola para no dañar el flujo de la aplicación
-                console.log(`Clic en un enlace: Tag=${tag}, Nombre=${name}`);
-                // Implementaremos la lógica de búsqueda en el siguiente paso
-            });
-        });
     }
 
     function filterContent() {
