@@ -179,20 +179,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function parsePrerequisite(prerequisite) {
-        if (!prerequisite) return '';
-        if (Array.isArray(prerequisite)) {
-            return prerequisite.map(p => parsePrerequisite(p)).join(', ');
-        }
-        if (typeof prerequisite === 'object' && prerequisite.name) {
-            return `<strong>${prerequisite.name}</strong>`;
-        }
-        if (typeof prerequisite === 'string') {
-            return prerequisite;
-        }
-        return '';
-    }
-    
     function cleanEntryText(text) {
         if (typeof text !== 'string') return text;
         
@@ -201,33 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return parts[1] || parts[0].trim();
         });
     }
-
-    // Nueva función para renderizar entradas anidadas
-    function renderEntries(entries) {
-        let html = '';
-        if (Array.isArray(entries)) {
-            entries.forEach(entry => {
-                if (typeof entry === 'string') {
-                    html += `<p>${cleanEntryText(entry)}</p>`;
-                } else if (typeof entry === 'object' && entry !== null) {
-                    if (entry.name && entry.entries) {
-                        html += `<h4><strong>${cleanEntryText(entry.name)}</strong></h4>`;
-                        html += renderEntries(entry.entries);
-                    } else if (entry.type === 'list' && entry.items) {
-                        html += `<ul>`;
-                        entry.items.forEach(item => {
-                            html += `<li>${cleanEntryText(item.entry)}</li>`;
-                        });
-                        html += `</ul>`;
-                    }
-                }
-            });
-        } else if (typeof entries === 'string') {
-            html += `<p>${cleanEntryText(entries)}</p>`;
-        }
-        return html;
-    }
-
+    
     function showDetail(item) {
         showScreen('detail-screen');
         detailTitle.textContent = item.name;
@@ -239,15 +199,29 @@ document.addEventListener('DOMContentLoaded', () => {
         if (item.prerequisite) {
             const prerequisiteElement = document.createElement('div');
             prerequisiteElement.className = 'detail-item';
-            prerequisiteElement.innerHTML = `<h3><strong>${labels.prerequisite}</strong></h3><p>${parsePrerequisite(item.prerequisite)}</p>`;
+            prerequisiteElement.innerHTML = `<h3><strong>${labels.prerequisite}</strong></h3><p>${cleanEntryText(item.prerequisite)}</p>`;
             detailContainer.appendChild(prerequisiteElement);
         }
     
         if (item.entries && Array.isArray(item.entries)) {
-            const entriesContainer = document.createElement('div');
-            entriesContainer.className = 'detail-item';
-            entriesContainer.innerHTML = renderEntries(item.entries);
-            detailContainer.appendChild(entriesContainer);
+            item.entries.forEach(entry => {
+                const entryElement = document.createElement('div');
+                entryElement.className = 'detail-item';
+                let entryText = '';
+
+                if (typeof entry === 'string') {
+                    entryText += `<p>${cleanEntryText(entry)}</p>`;
+                } else if (entry.name && entry.entries) {
+                    entryText += `<h3><strong>${cleanEntryText(entry.name)}</strong></h3>`;
+                    if (Array.isArray(entry.entries)) {
+                        entryText += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
+                    } else if (typeof entry.entries === 'string') {
+                        entryText += `<p>${cleanEntryText(entry.entries)}</p>`;
+                    }
+                }
+                entryElement.innerHTML = entryText;
+                detailContainer.appendChild(entryElement);
+            });
         }
     
         if (item.source || item.page) {
