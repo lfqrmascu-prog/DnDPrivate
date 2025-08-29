@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const backBtn = document.getElementById('back-btn');
     const backToSearchBtn = document.getElementById('back-to-search-btn');
     const backToContentBtn = document.getElementById('back-to-content-btn');
+    const filterPhb24Btn = document.getElementById('filter-phb24-btn');
 
     const menuBtns = document.querySelectorAll('.menu-btn');
     const contentListContainer = document.getElementById('content-list-container');
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentLang = 'en';
     let allContent = [];
     let currentDataType = '';
+    let isFilteredByPhb24 = false;
 
     // --- URL base de tu repositorio en GitHub ---
     const baseUrl = 'https://raw.githubusercontent.com/lfqrmascu-prog/DnDPrivate/main/data/';
@@ -38,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'races': { file: 'races.json', key: 'race', name: {en: "Species", es: "Especies"} },
         'classes': { file: 'classes.json', key: 'class', name: {en: "Classes", es: "Clases"} },
         'feats': { file: 'feats.json', key: 'feat', name: {en: "Feats", es: "Dotes"} },
-        'options-features': { file: 'optionalfeatures.json', key: 'optionalfeature', name: {en: "Options & Features", es: "Opciones y Rasgos"} },
+        'options-features': { file: 'classfeatures.json', key: 'classFeature', name: {en: "Options & Features", es: "Opciones y Rasgos"} },
         'backgrounds': { file: 'backgrounds.json', key: 'background', name: {en: "Backgrounds", es: "Trasfondos"} },
         'items': { file: 'items.json', key: 'item', name: {en: "Items", es: "Objetos"} },
         'spells-phb': { file: 'spells-phb.json', key: 'spell', name: {en: "Spells", es: "Conjuros"} }
@@ -97,8 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (screenId === 'welcome-screen') {
             welcomeTitle.innerHTML = lang.titles.welcome;
             searchBtn.textContent = lang.mainMenu.search;
-            createBtn.textContent = lang.mainMenu.create;
-            manageBtn.textContent = lang.mainMenu.manage;
             document.getElementById('flag-img-welcome').src = lang.flagSrc;
             document.getElementById('flag-img-welcome').alt = lang.flagAlt;
         } 
@@ -118,9 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
             backToSearchBtn.textContent = lang.backToSearch;
             const placeholder = lang.filterPlaceholder(translatedKey.toLowerCase());
             contentFilterInput.placeholder = placeholder;
-            if (allContent.length > 0) {
-                displayContent(allContent);
-            }
+            // No llamar a displayContent aquí
         }
         else if (screenId === 'detail-screen') {
             detailTitle.textContent = lang.titles.detail;
@@ -171,32 +169,46 @@ document.addEventListener('DOMContentLoaded', () => {
             contentListContainer.appendChild(itemElement);
         });
     }
+
+    function filterContent() {
+        const filterValue = contentFilterInput.value.toLowerCase();
+        let filteredContent = allContent.filter(item => item.name.toLowerCase().includes(filterValue));
+
+        if (filterPhb24Btn.classList.contains('active')) {
+            filteredContent = filteredContent.filter(item => item.source === 'PHB\'24');
+        }
+
+        displayContent(filteredContent);
+    }
     
     function showDetail(item) {
         showScreen('detail-screen');
         detailTitle.textContent = item.name;
         detailContainer.innerHTML = '';
         
-        // Muestra la información de 'entries' si existe
-        if (item.entries && Array.isArray(item.entries)) {
+        const lang = translations[currentLang];
+        const itemKeys = Object.keys(item);
+        
+        itemKeys.forEach(key => {
+            if (key !== 'name' && key !== 'source' && key !== 'subraces' && key !== 'entries' && key !== 'page') {
+                const detailItem = document.createElement('div');
+                detailItem.className = 'detail-item';
+                detailItem.innerHTML = `
+                    <h3>${key.charAt(0).toUpperCase() + key.slice(1)}</h3>
+                    <p>${item[key]}</p>
+                `;
+                detailContainer.appendChild(detailItem);
+            }
+        });
+        
+        if (item.entries) {
             item.entries.forEach(entry => {
-                if (entry.name && entry.entries) {
-                    const entryElement = document.createElement('div');
-                    entryElement.className = 'detail-item';
-                    entryElement.innerHTML = `
-                        <h3>${entry.name}</h3>
-                        <p>${entry.entries.join(' ')}</p>
-                    `;
-                    detailContainer.appendChild(entryElement);
-                }
+                const entryElement = document.createElement('div');
+                entryElement.className = 'detail-item';
+                entryElement.innerHTML = `<h3>${entry.name}</h3><p>${entry.entries.join(' ')}</p>`;
+                detailContainer.appendChild(entryElement);
             });
         }
-    }
-
-    function filterContent() {
-        const filterValue = contentFilterInput.value.toLowerCase();
-        const filteredContent = allContent.filter(item => item.name.toLowerCase().includes(filterValue));
-        displayContent(filteredContent);
     }
 
     // --- Event Listeners ---
@@ -214,6 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     contentFilterInput.addEventListener('input', filterContent);
+    filterPhb24Btn.addEventListener('click', () => {
+        filterPhb24Btn.classList.toggle('active');
+        filterContent();
+    });
     
     document.querySelectorAll('.language-btn-style').forEach(btn => {
         btn.addEventListener('click', () => {
