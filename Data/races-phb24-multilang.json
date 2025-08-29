@@ -1,1548 +1,672 @@
 {
     "races": [
         {
-            "name": {
-                "en": "Aasimar [2024]",
-                "es": "Aasimar [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Aasimar [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "30",
             "traits": [
                 {
-                    "name": null,
-                    "description": {
-                        "en": "Aasimar (pronounced AH-sih-mar) are mortals who carry a spark of the Upper Planes within their souls. Whether descended from an angelic being or infused with celestial power, they can fan that spark to bring light, healing, and heavenly fury.\n\tAasimar can arise among any population of mortals. They resemble their parents, but they live for up to 160 years and have features that hint at their celestial heritage, such as metallic freckles, luminous eyes, a halo, or the skin color of an angel (silver, opalescent green, or coppery red). These features start subtle and become obvious when the aasimar learns to reveal their full celestial nature.",
-                        "es": "Aasimar (pronounced AH-sih-mar) are mortals who carry a spark of the Upper Planes within their souls. Whether descended from an angelic being or infused with celestial power, they can fan that spark to bring light, healing, and heavenly fury.\n\tAasimar can arise among any population of mortals. They resemble their parents, but they live for up to 160 years and have features that hint at their celestial heritage, such as metallic freckles, luminous eyes, a halo, or the skin color of an angel (silver, opalescent green, or coppery red). These features start subtle and become obvious when the aasimar learns to reveal their full celestial nature."
-                    }
+                    "name": "Description",
+                    "description": "Aasimar (pronounced AH-sih-mar) are mortals who carry a spark of the Upper Planes within their souls. Whether descended from an angelic being or infused with celestial power, they can fan that spark to bring light, healing, and heavenly fury.\n\tAasimar can arise among any population of mortals. They resemble their parents, but they live for up to 160 years and have features that hint at their celestial heritage, such as metallic freckles, luminous eyes, a halo, or the skin color of an angel (silver, opalescent green, or coppery red). These features start subtle and become obvious when the aasimar learns to reveal their full celestial nature."
                 },
                 {
-                    "name": null,
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Aasimar can be Medium (about 4-7 feet tall) or Small (about 2-4 feet tall).",
-                        "es": "Aasimar can be Medium (about 4-7 feet tall) or Small (about 2-4 feet tall)."
-                    },
+                    "name": "Size",
+                    "description": "Aasimar can be Medium (about 4-7 feet tall) or Small (about 2-4 feet tall).",
                     "options": [
                         {
-                            "name": {
-                                "en": "Medium",
-                                "es": "Medium"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Medium",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Small",
-                                "es": "Small"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Small",
+                            "description": "N/A"
                         }
                     ]
                 },
                 {
-                    "name": {
-                        "en": "Celestial Resistance",
-                        "es": "Resistencia Celestial"
-                    },
-                    "description": {
-                        "en": "You have Resistance to Necrotic damage and Radiant damage.",
-                        "es": "You have Resistance to Necrotic damage and Radiant damage."
-                    }
+                    "name": "Celestial Resistance",
+                    "description": "You have Resistance to Necrotic damage and Radiant damage."
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 60 feet.",
-                        "es": "You have Darkvision with a range of 60 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 60 feet."
                 },
                 {
-                    "name": {
-                        "en": "Healing Hands",
-                        "es": "Manos Curativas"
-                    },
-                    "description": {
-                        "en": "As a Magic action, you touch a creature and roll a number of d4s equal to your Proficiency Bonus. The creature regains a number of Hit Points equal to the total rolled. Once you use this trait, you can't use it again until you finish a Long Rest.",
-                        "es": "As a Magic action, you touch a creature and roll a number of d4s equal to your Proficiency Bonus. The creature regains a number of Hit Points equal to the total rolled. Once you use this trait, you can't use it again until you finish a Long Rest."
-                    }
+                    "name": "Healing Hands",
+                    "description": "As a Magic action, you touch a creature and roll a number of d4s equal to your Proficiency Bonus. The creature regains a number of Hit Points equal to the total rolled. Once you use this trait, you can't use it again until you finish a Long Rest."
                 },
                 {
-                    "name": {
-                        "en": "Light Bearer",
-                        "es": "Portador de Luz"
-                    },
-                    "description": {
-                        "en": "You know the Light cantrip. Charisma is your spellcasting ability for it.",
-                        "es": "You know the Light cantrip. Charisma is your spellcasting ability for it."
-                    }
+                    "name": "Light Bearer",
+                    "description": "You know the Light cantrip. Charisma is your spellcasting ability for it."
                 },
                 {
-                    "name": {
-                        "en": "Celestial Revelation",
-                        "es": "Revelación Celestial"
-                    },
-                    "description": {
-                        "en": "When you reach character level 3, you can transform as a Bonus Action using one of the options below (choose the option each time you transform). The transformation lasts for 1 minute or until you end it (no action required). Once you transform, you can't do so again until you finish a Long Rest.\n\tOnce on each of your turns before the transformation ends, you can deal extra damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your Proficiency Bonus, and the extra damage's type is either Necrotic for Necrotic Shroud or Radiant for Heavenly Wings and Inner Radiance.",
-                        "es": "When you reach character level 3, you can transform as a Bonus Action using one of the options below (choose the option each time you transform). The transformation lasts for 1 minute or until you end it (no action required). Once you transform, you can't do so again until you finish a Long Rest.\n\tOnce on each of your turns before the transformation ends, you can deal extra damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your Proficiency Bonus, and the extra damage's type is either Necrotic for Necrotic Shroud or Radiant for Heavenly Wings and Inner Radiance."
-                    },
+                    "name": "Celestial Revelation",
+                    "description": "When you reach character level 3, you can transform as a Bonus Action using one of the options below (choose the option each time you transform). The transformation lasts for 1 minute or until you end it (no action required). Once you transform, you can't do so again until you finish a Long Rest.\n\tOnce on each of your turns before the transformation ends, you can deal extra damage to one target when you deal damage to it with an attack or a spell. The extra damage equals your Proficiency Bonus, and the extra damage's type is either Necrotic for Necrotic Shroud or Radiant for Heavenly Wings and Inner Radiance.",
                     "options": [
                         {
-                            "name": {
-                                "en": "Heavenly Wings",
-                                "es": "Alas Celestiales"
-                            },
-                            "description": {
-                                "en": "Two spectral wings sprout from your back temporarily. Until the transformation ends, you have a Fly Speed equal to your Speed.",
-                                "es": "Two spectral wings sprout from your back temporarily. Until the transformation ends, you have a Fly Speed equal to your Speed."
-                            }
+                            "name": "Heavenly Wings",
+                            "description": "Two spectral wings sprout from your back temporarily. Until the transformation ends, you have a Fly Speed equal to your Speed."
                         },
                         {
-                            "name": {
-                                "en": "Inner Radiance",
-                                "es": "Resplandor Interior"
-                            },
-                            "description": {
-                                "en": "Searing light temporarily radiates from your eyes and mouth. For the duration, you shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes Radiant damage equal to your Proficiency Bonus.",
-                                "es": "Searing light temporarily radiates from your eyes and mouth. For the duration, you shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes Radiant damage equal to your Proficiency Bonus."
-                            }
+                            "name": "Inner Radiance",
+                            "description": "Searing light temporarily radiates from your eyes and mouth. For the duration, you shed Bright Light in a 10-foot radius and Dim Light for an additional 10 feet, and at the end of each of your turns, each creature within 10 feet of you takes Radiant damage equal to your Proficiency Bonus."
                         },
                         {
-                            "name": {
-                                "en": "Necrotic Shroud",
-                                "es": "Manto Necrótico"
-                            },
-                            "description": {
-                                "en": "Your eyes briefly become pools of darkness, and flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you must succeed on a Charisma saving throw (DC 8 plus your Charisma modifier and Proficiency Bonus) or have the Frightened condition until the end of your next turn.",
-                                "es": "Your eyes briefly become pools of darkness, and flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you must succeed on a Charisma saving throw (DC 8 plus your Charisma modifier and Proficiency Bonus) or have the Frightened condition until the end of your next turn."
-                            }
+                            "name": "Necrotic Shroud",
+                            "description": "Your eyes briefly become pools of darkness, and flightless wings sprout from your back temporarily. Creatures other than your allies within 10 feet of you must succeed on a Charisma saving throw (DC 8 plus your Charisma modifier and Proficiency Bonus) or have the Frightened condition until the end of your next turn."
                         }
                     ]
                 }
             ]
         },
         {
-            "name": {
-                "en": "Dragonborn [2024]",
-                "es": "Dracónido [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Dragonborn [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "30",
             "traits": [
                 {
-                    "name": null,
-                    "description": {
-                        "en": "The ancestors of dragonborn hatched from the eggs of chromatic and metallic dragons. One story holds that these eggs were blessed by the dragon gods Bahamut and Tiamat, who wanted to populate the multiverse with people created in their image. Another story claims that dragons created the first dragonborn without the gods' blessings. Whatever their origin, dragonborn have made homes for themselves on the Material Plane.\n\tDragonborn look like wingless, bipedal dragons-scaly, bright-eyed, and thick-boned with horns on their heads-and their coloration and other features are reminiscent of their draconic ancestors.",
-                        "es": "The ancestors of dragonborn hatched from the eggs of chromatic and metallic dragons. One story holds that these eggs were blessed by the dragon gods Bahamut and Tiamat, who wanted to populate the multiverse with people created in their image. Another story claims that dragons created the first dragonborn without the gods' blessings. Whatever their origin, dragonborn have made homes for themselves on the Material Plane.\n\tDragonborn look like wingless, bipedal dragons-scaly, bright-eyed, and thick-boned with horns on their heads-and their coloration and other features are reminiscent of their draconic ancestors."
-                    }
+                    "name": "Description",
+                    "description": "The ancestors of dragonborn hatched from the eggs of chromatic and metallic dragons. One story holds that these eggs were blessed by the dragon gods Bahamut and Tiamat, who wanted to populate the multiverse with people created in their image. Another story claims that dragons created the first dragonborn without the gods' blessings. Whatever their origin, dragonborn have made homes for themselves on the Material Plane.\n\tDragonborn look like wingless, bipedal dragons-scaly, bright-eyed, and thick-boned with horns on their heads-and their coloration and other features are reminiscent of their draconic ancestors."
                 },
                 {
-                    "name": null,
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Medium (about 5-7 feet tall)",
-                        "es": "Medium (about 5-7 feet tall)"
-                    }
+                    "name": "Size",
+                    "description": "Medium (about 5-7 feet tall)"
                 },
                 {
-                    "name": {
-                        "en": "Draconic Ancestry",
-                        "es": "Ascendencia Dracónica"
-                    },
-                    "description": {
-                        "en": "Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.\n\nDraconic Ancestry:\nDragon | Damage Type\nBlack | Acid\nBlue | Lightning\nBrass | Fire\nBronze | Lightning\nCopper | Acid\nGold | Fire\nGreen | Poison\nRed | Fire\nSilver | Cold\nWhite | Cold",
-                        "es": "Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.\n\nDraconic Ancestry:\nDragon | Damage Type\nBlack | Acid\nBlue | Lightning\nBrass | Fire\nBronze | Lightning\nCopper | Acid\nGold | Fire\nGreen | Poison\nRed | Fire\nSilver | Cold\nWhite | Cold"
-                    },
+                    "name": "Draconic Ancestry",
+                    "description": "Your lineage stems from a dragon progenitor. Choose the kind of dragon from the Draconic Ancestors table. Your choice affects your Breath Weapon and Damage Resistance traits as well as your appearance.\n\nDraconic Ancestry:\nDragon | Damage Type\nBlack | Acid\nBlue | Lightning\nBrass | Fire\nBronze | Lightning\nCopper | Acid\nGold | Fire\nGreen | Poison\nRed | Fire\nSilver | Cold\nWhite | Cold",
                     "options": [
                         {
-                            "name": {
-                                "en": "Black Dragon",
-                                "es": "Black Dragon"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Black Dragon",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Blue Dragon",
-                                "es": "Blue Dragon"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Blue Dragon",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Brass Dragon",
-                                "es": "Brass Dragon"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Brass Dragon",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Bronze Dragon",
-                                "es": "Bronze Dragon"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Bronze Dragon",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Copper Dragon",
-                                "es": "Copper Dragon"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Copper Dragon",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Gold Dragon",
-                                "es": "Gold Dragon"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Gold Dragon",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Green Dragon",
-                                "es": "Green Dragon"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Green Dragon",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Red Dragon",
-                                "es": "Red Dragon"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Red Dragon",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Silver Dragon",
-                                "es": "Silver Dragon"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Silver Dragon",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "White Dragon",
-                                "es": "White Dragon"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "White Dragon",
+                            "description": "N/A"
                         }
                     ]
                 },
                 {
-                    "name": {
-                        "en": "Breath Weapon",
-                        "es": "Arma de Aliento"
-                    },
-                    "description": {
-                        "en": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).",
-                        "es": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10)."
-                    },
+                    "name": "Breath Weapon",
+                    "description": "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in either a 15-foot Cone or a 30-foot Line that is 5 feet wide (choose the shape each time). Each creature in that area must make a Dexterity saving throw (DC 8 plus your Constitution modifier and Proficiency Bonus). On a failed save, a creature takes 1d10 damage of the type determined by your Draconic Ancestry trait. On a successful save, a creature takes half as much damage. This damage increases by 1d10 when you reach character levels 5 (2d10), 11 (3d10), and 17 (4d10).",
                     "options": [
                         {
-                            "name": {
-                                "en": "Cone",
-                                "es": "Cone"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Cone",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Line",
-                                "es": "Line"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Line",
+                            "description": "N/A"
                         }
                     ]
                 },
                 {
-                    "name": {
-                        "en": "Damage Resistance",
-                        "es": "Resistencia al Daño"
-                    },
-                    "description": {
-                        "en": "You have Resistance to the damage type determined by your Draconic Ancestry trait.",
-                        "es": "You have Resistance to the damage type determined by your Draconic Ancestry trait."
-                    }
+                    "name": "Damage Resistance",
+                    "description": "You have Resistance to the damage type determined by your Draconic Ancestry trait."
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 60 feet.",
-                        "es": "You have Darkvision with a range of 60 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 60 feet."
                 },
                 {
-                    "name": {
-                        "en": "Draconic Flight",
-                        "es": "Vuelo Dracónico"
-                    },
-                    "description": {
-                        "en": "When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Your wings appear to be made of the same energy as your Breath Weapon.",
-                        "es": "When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Your wings appear to be made of the same energy as your Breath Weapon."
-                    }
+                    "name": "Draconic Flight",
+                    "description": "When you reach character level 5, you can channel draconic magic to give yourself temporary flight. As a Bonus Action, you sprout spectral wings on your back that last for 10 minutes or until you retract the wings (no action required) or have the Incapacitated condition. During that time, you have a Fly Speed equal to your Speed. Your wings appear to be made of the same energy as your Breath Weapon."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Dwarf [2024]",
-                "es": "Enano [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Dwarf [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Dwarves were raised from the earth in the elder days by a deity of the forge. Called by various names on different worlds -Moradin, Reorx, and others- that god gave dwarves an affinity for stone and metal and for living underground. The god also made them resilient like the mountains, with a life span of about 350 years.\n\tSquat and often bearded, the original dwarves carved cities and strongholds into mountainsides and under the earth. Their oldest legends tell of conflicts with the monsters of mountaintops and the Underdark, whether those monsters were towering giants or subterranean horrors. Inspired by those tales, dwarves of any culture often sing of valorous deeds-especially of the little overcoming the mighty.\n\tOn some worlds in the multiverse, the first settlements of dwarves were built in hills or mountains, and the families who trace their ancestry to those settlements call themselves hill dwarves or mountain dwarves, respectively. The Greyhawk and Dragonlance settings have such communities.",
-                        "es": "Dwarves were raised from the earth in the elder days by a deity of the forge. Called by various names on different worlds -Moradin, Reorx, and others- that god gave dwarves an affinity for stone and metal and for living underground. The god also made them resilient like the mountains, with a life span of about 350 years.\n\tSquat and often bearded, the original dwarves carved cities and strongholds into mountainsides and under the earth. Their oldest legends tell of conflicts with the monsters of mountaintops and the Underdark, whether those monsters were towering giants or subterranean horrors. Inspired by those tales, dwarves of any culture often sing of valorous deeds-especially of the little overcoming the mighty.\n\tOn some worlds in the multiverse, the first settlements of dwarves were built in hills or mountains, and the families who trace their ancestry to those settlements call themselves hill dwarves or mountain dwarves, respectively. The Greyhawk and Dragonlance settings have such communities."
-                    }
+                    "name": "Description",
+                    "description": "Dwarves were raised from the earth in the elder days by a deity of the forge. Called by various names on different worlds -Moradin, Reorx, and others- that god gave dwarves an affinity for stone and metal and for living underground. The god also made them resilient like the mountains, with a life span of about 350 years.\n\tSquat and often bearded, the original dwarves carved cities and strongholds into mountainsides and under the earth. Their oldest legends tell of conflicts with the monsters of mountaintops and the Underdark, whether those monsters were towering giants or subterranean horrors. Inspired by those tales, dwarves of any culture often sing of valorous deeds-especially of the little overcoming the mighty.\n\tOn some worlds in the multiverse, the first settlements of dwarves were built in hills or mountains, and the families who trace their ancestry to those settlements call themselves hill dwarves or mountain dwarves, respectively. The Greyhawk and Dragonlance settings have such communities."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Medium (about 4-5 feet tall)",
-                        "es": "Medium (about 4-5 feet tall)"
-                    }
+                    "name": "Size",
+                    "description": "Medium (about 4-5 feet tall)"
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 120 feet.",
-                        "es": "You have Darkvision with a range of 120 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 120 feet."
                 },
                 {
-                    "name": {
-                        "en": "Dwarven Resilience",
-                        "es": "Resiliencia Enana"
-                    },
-                    "description": {
-                        "en": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition.",
-                        "es": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition."
-                    }
+                    "name": "Dwarven Resilience",
+                    "description": "You have Resistance to Poison damage. You also have Advantage on saving throws you make to avoid or end the Poisoned condition."
                 },
                 {
-                    "name": {
-                        "en": "Dwarven Toughness",
-                        "es": "Robustez Enana"
-                    },
-                    "description": {
-                        "en": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level.",
-                        "es": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level."
-                    }
+                    "name": "Dwarven Toughness",
+                    "description": "Your Hit Point maximum increases by 1, and it increases by 1 again whenever you gain a level."
                 },
                 {
-                    "name": {
-                        "en": "Stonecunning",
-                        "es": "Piedra Sabia"
-                    },
-                    "description": {
-                        "en": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked.",
-                        "es": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked."
-                    }
+                    "name": "Stonecunning",
+                    "description": "As a Bonus Action, you gain Tremorsense with a range of 60 feet for 10 minutes. You must be on a stone surface or touching a stone surface to use this Tremorsense. The stone can be natural or worked."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Elf, Drow [2024]",
-                "es": "Elfo, Drow [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Elf, Drow [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Created by the god Corellon, the first elves could change their forms at will. They lost this ability when Corellon cursed them for plotting with the deity Lolth, who tried and failed to usurp Corellon's dominion. When Lolth was cast into the Abyss, most elves renounced her and earned Corellon's forgiveness, but that which Corellon had taken from them was lost forever.\n\tNo longer able to shapeshift at will, the elves retreated to the Feywild, where their sorrow was deepened by that plane's influence. Over time, curiosity led many of them to explore other planes of existence, including worlds in the Material Plane.\n\tElves have pointed ears and lack facial and body hair. They live for around 750 years, and they don't sleep but instead enter a trance when they need to rest. In that state, they remain aware of their surroundings while immersing themselves in memories and meditations.\n\tAn environment subtly transforms elves after they inhabit it for a millennium or more, and it grants them certain kinds of magic. Drow, high elves, and wood elves are examples of elves who have been transformed thus.\n\nDrow typically dwell in the Underdark and have been shaped by it. Some drow individuals and societies avoid the Underdark altogether yet car ry its magic. In the Eberron setting. for example. drow dwell in rainforests and cyclopean ruins on the continent of Xen'drik.",
-                        "es": "Created by the god Corellon, the first elves could change their forms at will. They lost this ability when Corellon cursed them for plotting with the deity Lolth, who tried and failed to usurp Corellon's dominion. When Lolth was cast into the Abyss, most elves renounced her and earned Corellon's forgiveness, but that which Corellon had taken from them was lost forever.\n\tNo longer able to shapeshift at will, the elves retreated to the Feywild, where their sorrow was deepened by that plane's influence. Over time, curiosity led many of them to explore other planes of existence, including worlds in the Material Plane.\n\tElves have pointed ears and lack facial and body hair. They live for around 750 years, and they don't sleep but instead enter a trance when they need to rest. In that state, they remain aware of their surroundings while immersing themselves in memories and meditations.\n\tAn environment subtly transforms elves after they inhabit it for a millennium or more, and it grants them certain kinds of magic. Drow, high elves, and wood elves are examples of elves who have been transformed thus.\n\nDrow typically dwell in the Underdark and have been shaped by it. Some drow individuals and societies avoid the Underdark altogether yet car ry its magic. In the Eberron setting. for example. drow dwell in rainforests and cyclopean ruins on the continent of Xen'drik."
-                    }
+                    "name": "Description",
+                    "description": "Created by the god Corellon, the first elves could change their forms at will. They lost this ability when Corellon cursed them for plotting with the deity Lolth, who tried and failed to usurp Corellon's dominion. When Lolth was cast into the Abyss, most elves renounced her and earned Corellon's forgiveness, but that which Corellon had taken from them was lost forever.\n\tNo longer able to shapeshift at will, the elves retreated to the Feywild, where their sorrow was deepened by that plane's influence. Over time, curiosity led many of them to explore other planes of existence, including worlds in the Material Plane.\n\tElves have pointed ears and lack facial and body hair. They live for around 750 years, and they don't sleep but instead enter a trance when they need to rest. In that state, they remain aware of their surroundings while immersing themselves in memories and meditations.\n\tAn environment subtly transforms elves after they inhabit it for a millennium or more, and it grants them certain kinds of magic. Drow, high elves, and wood elves are examples of elves who have been transformed thus.\n\nDrow typically dwell in the Underdark and have been shaped by it. Some drow individuals and societies avoid the Underdark altogether yet car ry its magic. In the Eberron setting. for example. drow dwell in rainforests and cyclopean ruins on the continent of Xen'drik."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Medium (about 5-6 feet tall)",
-                        "es": "Medium (about 5-6 feet tall)"
-                    }
+                    "name": "Size",
+                    "description": "Medium (about 5-6 feet tall)"
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 60 feet. (Drow Lineage increases this)",
-                        "es": "You have Darkvision with a range of 60 feet. (Drow Lineage increases this)"
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 60 feet. (Drow Lineage increases this)"
                 },
                 {
-                    "name": {
-                        "en": "Drow Lineage",
-                        "es": "Linaje Drow"
-                    },
-                    "description": {
-                        "en": "The range of your Darkvision increases to 120 feet. You also know the Dancing Lights cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage).",
-                        "es": "The range of your Darkvision increases to 120 feet. You also know the Dancing Lights cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage)."
-                    }
+                    "name": "Drow Lineage",
+                    "description": "The range of your Darkvision increases to 120 feet. You also know the Dancing Lights cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage)."
                 },
                 {
-                    "name": {
-                        "en": "Fey Ancestry",
-                        "es": "Ascendencia Feérica"
-                    },
-                    "description": {
-                        "en": "You have Advantage on saving throws you make to avoid or end the Charmed condition.",
-                        "es": "You have Advantage on saving throws you make to avoid or end the Charmed condition."
-                    }
+                    "name": "Fey Ancestry",
+                    "description": "You have Advantage on saving throws you make to avoid or end the Charmed condition."
                 },
                 {
-                    "name": {
-                        "en": "Keen Senses",
-                        "es": "Sentidos Agudos"
-                    },
-                    "description": {
-                        "en": "You have proficiency in the Insight, Perception, or Survival skill.",
-                        "es": "You have proficiency in the Insight, Perception, or Survival skill."
-                    }
+                    "name": "Keen Senses",
+                    "description": "You have proficiency in the Insight, Perception, or Survival skill."
                 },
                 {
-                    "name": {
-                        "en": "Trance",
-                        "es": "Trance"
-                    },
-                    "description": {
-                        "en": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.",
-                        "es": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness."
-                    }
+                    "name": "Trance",
+                    "description": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Elf, High [2024]",
-                "es": "Elfo, Alto [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Elf, High [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Created by the god Corellon, the first elves could change their forms at will. They lost this ability when Corellon cursed them for plotting with the deity Lolth, who tried and failed to usurp Corellon's dominion. When Lolth was cast into the Abyss, most elves renounced her and earned Corellon's forgiveness, but that which Corellon had taken from them was lost forever.\n\tNo longer able to shapeshift at will, the elves retreated to the Feywild, where their sorrow was deepened by that plane's influence. Over time, curiosity led many of them to explore other planes of existence, including worlds in the Material Plane.\n\tElves have pointed ears and lack facial and body hair. They live for around 750 years, and they don't sleep but instead enter a trance when they need to rest. In that state, they remain aware of their surroundings while immersing themselves in memories and meditations.\n\tAn environment subtly transforms elves after they inhabit it for a millennium or more, and it grants them certain kinds of magic. Drow, high elves, and wood elves are examples of elves who have been transformed thus.\n\nHigh elves have been infused with the magic of crossings between the Feywild and the Material Plane. On some worlds. high elves refer to themselves by other names. For example. they call themselves sun or moon elves in the Forgotten Realms setting, Silvanesti and Qualinesti in the Dragon lance setting, and Aereni in the Eberron setting.",
-                        "es": "Created by the god Corellon, the first elves could change their forms at will. They lost this ability when Corellon cursed them for plotting with the deity Lolth, who tried and failed to usurp Corellon's dominion. When Lolth was cast into the Abyss, most elves renounced her and earned Corellon's forgiveness, but that which Corellon had taken from them was lost forever.\n\tNo longer able to shapeshift at will, the elves retreated to the Feywild, where their sorrow was deepened by that plane's influence. Over time, curiosity led many of them to explore other planes of existence, including worlds in the Material Plane.\n\tElves have pointed ears and lack facial and body hair. They live for around 750 years, and they don't sleep but instead enter a trance when they need to rest. In that state, they remain aware of their surroundings while immersing themselves in memories and meditations.\n\tAn environment subtly transforms elves after they inhabit it for a millennium or more, and it grants them certain kinds of magic. Drow, high elves, and wood elves are examples of elves who have been transformed thus.\n\nHigh elves have been infused with the magic of crossings between the Feywild and the Material Plane. On some worlds. high elves refer to themselves by other names. For example. they call themselves sun or moon elves in the Forgotten Realms setting, Silvanesti and Qualinesti in the Dragon lance setting, and Aereni in the Eberron setting."
-                    }
+                    "name": "Description",
+                    "description": "Created by the god Corellon, the first elves could change their forms at will. They lost this ability when Corellon cursed them for plotting with the deity Lolth, who tried and failed to usurp Corellon's dominion. When Lolth was cast into the Abyss, most elves renounced her and earned Corellon's forgiveness, but that which Corellon had taken from them was lost forever.\n\tNo longer able to shapeshift at will, the elves retreated to the Feywild, where their sorrow was deepened by that plane's influence. Over time, curiosity led many of them to explore other planes of existence, including worlds in the Material Plane.\n\tElves have pointed ears and lack facial and body hair. They live for around 750 years, and they don't sleep but instead enter a trance when they need to rest. In that state, they remain aware of their surroundings while immersing themselves in memories and meditations.\n\tAn environment subtly transforms elves after they inhabit it for a millennium or more, and it grants them certain kinds of magic. Drow, high elves, and wood elves are examples of elves who have been transformed thus.\n\nHigh elves have been infused with the magic of crossings between the Feywild and the Material Plane. On some worlds. high elves refer to themselves by other names. For example. they call themselves sun or moon elves in the Forgotten Realms setting, Silvanesti and Qualinesti in the Dragon lance setting, and Aereni in the Eberron setting."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Medium (about 5-6 feet tall)",
-                        "es": "Medium (about 5-6 feet tall)"
-                    }
+                    "name": "Size",
+                    "description": "Medium (about 5-6 feet tall)"
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 60 feet.",
-                        "es": "You have Darkvision with a range of 60 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 60 feet."
                 },
                 {
-                    "name": {
-                        "en": "High Elf Lineage",
-                        "es": "Linaje de Elfo Alto"
-                    },
-                    "description": {
-                        "en": "You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage).",
-                        "es": "You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage)."
-                    }
+                    "name": "High Elf Lineage",
+                    "description": "You know the Prestidigitation cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage)."
                 },
                 {
-                    "name": {
-                        "en": "Fey Ancestry",
-                        "es": "Ascendencia Feérica"
-                    },
-                    "description": {
-                        "en": "You have Advantage on saving throws you make to avoid or end the Charmed condition.",
-                        "es": "You have Advantage on saving throws you make to avoid or end the Charmed condition."
-                    }
+                    "name": "Fey Ancestry",
+                    "description": "You have Advantage on saving throws you make to avoid or end the Charmed condition."
                 },
                 {
-                    "name": {
-                        "en": "Keen Senses",
-                        "es": "Sentidos Agudos"
-                    },
-                    "description": {
-                        "en": "You have proficiency in the Insight, Perception, or Survival skill.",
-                        "es": "You have proficiency in the Insight, Perception, or Survival skill."
-                    }
+                    "name": "Keen Senses",
+                    "description": "You have proficiency in the Insight, Perception, or Survival skill."
                 },
                 {
-                    "name": {
-                        "en": "Trance",
-                        "es": "Trance"
-                    },
-                    "description": {
-                        "en": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.",
-                        "es": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness."
-                    }
+                    "name": "Trance",
+                    "description": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Elf, Wood [2024]",
-                "es": "Elfo, Silvano [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Elf, Wood [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "35",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Created by the god Corellon, the first elves could change their forms at will. They lost this ability when Corellon cursed them for plotting with the deity Lolth, who tried and failed to usurp Corellon's dominion. When Lolth was cast into the Abyss, most elves renounced her and earned Corellon's forgiveness, but that which Corellon had taken from them was lost forever.\n\tNo longer able to shapeshift at will, the elves retreated to the Feywild, where their sorrow was deepened by that plane's influence. Over time, curiosity led many of them to explore other planes of existence, including worlds in the Material Plane.\n\tElves have pointed ears and lack facial and body hair. They live for around 750 years, and they don't sleep but instead enter a trance when they need to rest. In that state, they remain aware of their surroundings while immersing themselves in memories and meditations.\n\tAn environment subtly transforms elves after they inhabit it for a millennium or more, and it grants them certain kinds of magic. Drow, high elves, and wood elves are examples of elves who have been transformed thus.\n\nWood elves carry the magic of primeval forests within themselves. They are known by many other names, including wild elves, green elves, and forest elves. Grugach are reclusive wood elves of the Greyhawk setting, while the Kagones and the Tairnadal are wood elves of the Dragon lance and Eberron settings. respectively.",
-                        "es": "Created by the god Corellon, the first elves could change their forms at will. They lost this ability when Corellon cursed them for plotting with the deity Lolth, who tried and failed to usurp Corellon's dominion. When Lolth was cast into the Abyss, most elves renounced her and earned Corellon's forgiveness, but that which Corellon had taken from them was lost forever.\n\tNo longer able to shapeshift at will, the elves retreated to the Feywild, where their sorrow was deepened by that plane's influence. Over time, curiosity led many of them to explore other planes of existence, including worlds in the Material Plane.\n\tElves have pointed ears and lack facial and body hair. They live for around 750 years, and they don't sleep but instead enter a trance when they need to rest. In that state, they remain aware of their surroundings while immersing themselves in memories and meditations.\n\tAn environment subtly transforms elves after they inhabit it for a millennium or more, and it grants them certain kinds of magic. Drow, high elves, and wood elves are examples of elves who have been transformed thus.\n\nWood elves carry the magic of primeval forests within themselves. They are known by many other names, including wild elves, green elves, and forest elves. Grugach are reclusive wood elves of the Greyhawk setting, while the Kagones and the Tairnadal are wood elves of the Dragon lance and Eberron settings. respectively."
-                    }
+                    "name": "Description",
+                    "description": "Created by the god Corellon, the first elves could change their forms at will. They lost this ability when Corellon cursed them for plotting with the deity Lolth, who tried and failed to usurp Corellon's dominion. When Lolth was cast into the Abyss, most elves renounced her and earned Corellon's forgiveness, but that which Corellon had taken from them was lost forever.\n\tNo longer able to shapeshift at will, the elves retreated to the Feywild, where their sorrow was deepened by that plane's influence. Over time, curiosity led many of them to explore other planes of existence, including worlds in the Material Plane.\n\tElves have pointed ears and lack facial and body hair. They live for around 750 years, and they don't sleep but instead enter a trance when they need to rest. In that state, they remain aware of their surroundings while immersing themselves in memories and meditations.\n\tAn environment subtly transforms elves after they inhabit it for a millennium or more, and it grants them certain kinds of magic. Drow, high elves, and wood elves are examples of elves who have been transformed thus.\n\nWood elves carry the magic of primeval forests within themselves. They are known by many other names, including wild elves, green elves, and forest elves. Grugach are reclusive wood elves of the Greyhawk setting, while the Kagones and the Tairnadal are wood elves of the Dragon lance and Eberron settings. respectively."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Medium (about 5-6 feet tall)",
-                        "es": "Medium (about 5-6 feet tall)"
-                    }
+                    "name": "Size",
+                    "description": "Medium (about 5-6 feet tall)"
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 60 feet.",
-                        "es": "You have Darkvision with a range of 60 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 60 feet."
                 },
                 {
-                    "name": {
-                        "en": "Wood Elf Lineage",
-                        "es": "Linaje de Elfo Silvano"
-                    },
-                    "description": {
-                        "en": "Your Speed increases to 35 feet. You also know the Druidcraft cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage).",
-                        "es": "Your Speed increases to 35 feet. You also know the Druidcraft cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage)."
-                    }
+                    "name": "Wood Elf Lineage",
+                    "description": "Your Speed increases to 35 feet. You also know the Druidcraft cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the lineage)."
                 },
                 {
-                    "name": {
-                        "en": "Fey Ancestry",
-                        "es": "Ascendencia Feérica"
-                    },
-                    "description": {
-                        "en": "You have Advantage on saving throws you make to avoid or end the Charmed condition.",
-                        "es": "You have Advantage on saving throws you make to avoid or end the Charmed condition."
-                    }
+                    "name": "Fey Ancestry",
+                    "description": "You have Advantage on saving throws you make to avoid or end the Charmed condition."
                 },
                 {
-                    "name": {
-                        "en": "Keen Senses",
-                        "es": "Sentidos Agudos"
-                    },
-                    "description": {
-                        "en": "You have proficiency in the Insight, Perception, or Survival skill.",
-                        "es": "You have proficiency in the Insight, Perception, or Survival skill."
-                    }
+                    "name": "Keen Senses",
+                    "description": "You have proficiency in the Insight, Perception, or Survival skill."
                 },
                 {
-                    "name": {
-                        "en": "Trance",
-                        "es": "Trance"
-                    },
-                    "description": {
-                        "en": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.",
-                        "es": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness."
-                    }
+                    "name": "Trance",
+                    "description": "You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Gnome, Forest [2024]",
-                "es": "Gnomo, Silvano [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Gnome, Forest [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "S",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Gnomes are magical folk created by gods of invention, illusions, and life underground. The earliest gnomes were seldom seen by other folk due to the gnomes' secretive nature and their propensity for living in forests and burrows. What they lacked in size, they made up for in cleverness. They confounded predators with traps and labyrinthine tunnels. They also learned magic from gods like Garl Glittergold, Baervan Wildwanderer, and Baravar Cloakshadow, who visited them in disguise. That magic eventually created the lineages of forest gnomes and rock gnomes.\n\tGnomes are petite folk with big eyes and pointed ears, who live around 425 years. Many gnomes like the feeling of a roof over their head, even if that \"roof\" is nothing more than a hat.",
-                        "es": "Gnomes are magical folk created by gods of invention, illusions, and life underground. The earliest gnomes were seldom seen by other folk due to the gnomes' secretive nature and their propensity for living in forests and burrows. What they lacked in size, they made up for in cleverness. They confounded predators with traps and labyrinthine tunnels. They also learned magic from gods like Garl Glittergold, Baervan Wildwanderer, and Baravar Cloakshadow, who visited them in disguise. That magic eventually created the lineages of forest gnomes and rock gnomes.\n\tGnomes are petite folk with big eyes and pointed ears, who live around 425 years. Many gnomes like the feeling of a roof over their head, even if that \"roof\" is nothing more than a hat."
-                    }
+                    "name": "Description",
+                    "description": "Gnomes are magical folk created by gods of invention, illusions, and life underground. The earliest gnomes were seldom seen by other folk due to the gnomes' secretive nature and their propensity for living in forests and burrows. What they lacked in size, they made up for in cleverness. They confounded predators with traps and labyrinthine tunnels. They also learned magic from gods like Garl Glittergold, Baervan Wildwanderer, and Baravar Cloakshadow, who visited them in disguise. That magic eventually created the lineages of forest gnomes and rock gnomes.\n\tGnomes are petite folk with big eyes and pointed ears, who live around 425 years. Many gnomes like the feeling of a roof over their head, even if that \"roof\" is nothing more than a hat."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Small (about 3-4 feet tall)",
-                        "es": "Small (about 3-4 feet tall)"
-                    }
+                    "name": "Size",
+                    "description": "Small (about 3-4 feet tall)"
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 60 feet.",
-                        "es": "You have Darkvision with a range of 60 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 60 feet."
                 },
                 {
-                    "name": {
-                        "en": "Gnomish Cunning",
-                        "es": "Astucia Gnómica"
-                    },
-                    "description": {
-                        "en": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
-                        "es": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws."
-                    }
+                    "name": "Gnomish Cunning",
+                    "description": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws."
                 },
                 {
-                    "name": {
-                        "en": "Forest Lineage",
-                        "es": "Linaje Silvano"
-                    },
-                    "description": {
-                        "en": "You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell.",
-                        "es": "You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell."
-                    }
+                    "name": "Forest Lineage",
+                    "description": "You know the Minor Illusion cantrip. You also always have the Speak with Animals spell prepared. You can cast it without a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. You can also use any spell slots you have to cast the spell."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Gnome, Rock [2024]",
-                "es": "Gnomo, de Roca [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Gnome, Rock [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "S",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Gnomes are magical folk created by gods of invention, illusions, and life underground. The earliest gnomes were seldom seen by other folk due to the gnomes' secretive nature and their propensity for living in forests and burrows. What they lacked in size, they made up for in cleverness. They confounded predators with traps and labyrinthine tunnels. They also learned magic from gods like Garl Glittergold, Baervan Wildwanderer, and Baravar Cloakshadow, who visited them in disguise. That magic eventually created the lineages of forest gnomes and rock gnomes.\n\tGnomes are petite folk with big eyes and pointed ears, who live around 425 years. Many gnomes like the feeling of a roof over their head, even if that \"roof\" is nothing more than a hat.",
-                        "es": "Gnomes are magical folk created by gods of invention, illusions, and life underground. The earliest gnomes were seldom seen by other folk due to the gnomes' secretive nature and their propensity for living in forests and burrows. What they lacked in size, they made up for in cleverness. They confounded predators with traps and labyrinthine tunnels. They also learned magic from gods like Garl Glittergold, Baervan Wildwanderer, and Baravar Cloakshadow, who visited them in disguise. That magic eventually created the lineages of forest gnomes and rock gnomes.\n\tGnomes are petite folk with big eyes and pointed ears, who live around 425 years. Many gnomes like the feeling of a roof over their head, even if that \"roof\" is nothing more than a hat."
-                    }
+                    "name": "Description",
+                    "description": "Gnomes are magical folk created by gods of invention, illusions, and life underground. The earliest gnomes were seldom seen by other folk due to the gnomes' secretive nature and their propensity for living in forests and burrows. What they lacked in size, they made up for in cleverness. They confounded predators with traps and labyrinthine tunnels. They also learned magic from gods like Garl Glittergold, Baervan Wildwanderer, and Baravar Cloakshadow, who visited them in disguise. That magic eventually created the lineages of forest gnomes and rock gnomes.\n\tGnomes are petite folk with big eyes and pointed ears, who live around 425 years. Many gnomes like the feeling of a roof over their head, even if that \"roof\" is nothing more than a hat."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Small (about 3-4 feet tall)",
-                        "es": "Small (about 3-4 feet tall)"
-                    }
+                    "name": "Size",
+                    "description": "Small (about 3-4 feet tall)"
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 60 feet.",
-                        "es": "You have Darkvision with a range of 60 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 60 feet."
                 },
                 {
-                    "name": {
-                        "en": "Gnomish Cunning",
-                        "es": "Astucia Gnómica"
-                    },
-                    "description": {
-                        "en": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws.",
-                        "es": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws."
-                    }
+                    "name": "Gnomish Cunning",
+                    "description": "You have Advantage on Intelligence, Wisdom, and Charisma saving throws."
                 },
                 {
-                    "name": {
-                        "en": "Rock Lineage",
-                        "es": "Linaje de Roca"
-                    },
-                    "description": {
-                        "en": "You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from Prestidigitation; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell's ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn't do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action.",
-                        "es": "You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from Prestidigitation; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell's ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn't do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action."
-                    }
+                    "name": "Rock Lineage",
+                    "description": "You know the Mending and Prestidigitation cantrips. In addition, you can spend 10 minutes casting Prestidigitation to create a Tiny clockwork device (AC 5, 1 HP), such as a toy, fire starter, or music box. When you create the device, you determine its function by choosing one effect from Prestidigitation; the device produces that effect whenever you or another creature takes a Bonus Action to activate it with a touch. If the chosen effect has options within it, you choose one of those options for the device when you create it. For example, if you choose the spell's ignite-extinguish effect, you determine whether the device ignites or extinguishes fire; the device doesn't do both. You can have three such devices in existence at a time, and each falls apart 8 hours after its creation or when you dismantle it with a touch as a Utilize action."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Goliath [2024]",
-                "es": "Goliat [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Goliath [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "35",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Towering over most folk, goliaths are distant descendants of giants. Each goliath bears the favors of the first giants-favors that manifest in various supernatural boons, including the ability to quickly grow and temporarily approach the height of goliaths' gigantic kin.\n\tGoliaths have physical characteristics that are reminiscent of the giants in their family lines. For example, some goliaths look like stone giants, while others resemble fire giants. Whatever giants they count as kin, goliaths have forged their own path in the multiverse-unencumbered by the internecine conflicts that have ravaged giantkind for ages-and seek heights above those reached by their ancestors.",
-                        "es": "Towering over most folk, goliaths are distant descendants of giants. Each goliath bears the favors of the first giants-favors that manifest in various supernatural boons, including the ability to quickly grow and temporarily approach the height of goliaths' gigantic kin.\n\tGoliaths have physical characteristics that are reminiscent of the giants in their family lines. For example, some goliaths look like stone giants, while others resemble fire giants. Whatever giants they count as kin, goliaths have forged their own path in the multiverse-unencumbered by the internecine conflicts that have ravaged giantkind for ages-and seek heights above those reached by their ancestors."
-                    }
+                    "name": "Description",
+                    "description": "Towering over most folk, goliaths are distant descendants of giants. Each goliath bears the favors of the first giants-favors that manifest in various supernatural boons, including the ability to quickly grow and temporarily approach the height of goliaths' gigantic kin.\n\tGoliaths have physical characteristics that are reminiscent of the giants in their family lines. For example, some goliaths look like stone giants, while others resemble fire giants. Whatever giants they count as kin, goliaths have forged their own path in the multiverse-unencumbered by the internecine conflicts that have ravaged giantkind for ages-and seek heights above those reached by their ancestors."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Medium (about 7-8 feet tall)",
-                        "es": "Medium (about 7-8 feet tall)"
-                    }
+                    "name": "Size",
+                    "description": "Medium (about 7-8 feet tall)"
                 },
                 {
-                    "name": {
-                        "en": "Giant Ancestry",
-                        "es": "Ascendencia Gigante"
-                    },
-                    "description": {
-                        "en": "You are descended from Giants. Choose one of the following benefits- a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
-                        "es": "You are descended from Giants. Choose one of the following benefits- a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest."
-                    },
+                    "name": "Giant Ancestry",
+                    "description": "You are descended from Giants. Choose one of the following benefits- a supernatural boon from your ancestry; you can use the chosen benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.",
                     "options": [
                         {
-                            "name": {
-                                "en": "Cloud's Jaunt (Cloud Giant)",
-                                "es": "Paseo de Nube (Gigante de las Nubes)"
-                            },
-                            "description": {
-                                "en": "As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see.",
-                                "es": "As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see."
-                            }
+                            "name": "Cloud's Jaunt (Cloud Giant)",
+                            "description": "As a Bonus Action, you magically teleport up to 30 feet to an unoccupied space you can see."
                         },
                         {
-                            "name": {
-                                "en": "Fire's Burn (Fire Giant)",
-                                "es": "Quemadura de Fuego (Gigante de Fuego)"
-                            },
-                            "description": {
-                                "en": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target.",
-                                "es": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target."
-                            }
+                            "name": "Fire's Burn (Fire Giant)",
+                            "description": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d10 Fire damage to that target."
                         },
                         {
-                            "name": {
-                                "en": "Frost's Chill (Frost Giant)",
-                                "es": "Frío de Escarcha (Gigante de Escarcha)"
-                            },
-                            "description": {
-                                "en": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn.",
-                                "es": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn."
-                            }
+                            "name": "Frost's Chill (Frost Giant)",
+                            "description": "When you hit a target with an attack roll and deal damage to it, you can also deal 1d6 Cold damage to that target and reduce its Speed by 10 feet until the start of your next turn."
                         },
                         {
-                            "name": {
-                                "en": "Hill's Tumble (Hill Giant)",
-                                "es": "Caída de Colina (Gigante de la Colina)"
-                            },
-                            "description": {
-                                "en": "When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition.",
-                                "es": "When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition."
-                            }
+                            "name": "Hill's Tumble (Hill Giant)",
+                            "description": "When you hit a Large or smaller creature with an attack roll and deal damage to it, you can give that target the Prone condition."
                         },
                         {
-                            "name": {
-                                "en": "Stone's Endurance (Stone Giant)",
-                                "es": "Aguante de Piedra (Gigante de Piedra)"
-                            },
-                            "description": {
-                                "en": "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total.",
-                                "es": "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total."
-                            }
+                            "name": "Stone's Endurance (Stone Giant)",
+                            "description": "When you take damage, you can take a Reaction to roll 1d12. Add your Constitution modifier to the number rolled and reduce the damage by that total."
                         },
                         {
-                            "name": {
-                                "en": "Storm's Thunder (Storm Giant)",
-                                "es": "Trueno de Tormenta (Gigante de Tormenta)"
-                            },
-                            "description": {
-                                "en": "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature.",
-                                "es": "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature."
-                            }
+                            "name": "Storm's Thunder (Storm Giant)",
+                            "description": "When you take damage from a creature within 60 feet of you, you can take a Reaction to deal 1d8 Thunder damage to that creature."
                         }
                     ]
                 },
                 {
-                    "name": {
-                        "en": "Large Form",
-                        "es": "Forma Grande"
-                    },
-                    "description": {
-                        "en": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have Advantage on Strength checks, and your Speed increases by 10 feet. Once you use this trait, you can't use it again until you finish a Long Rest.",
-                        "es": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have Advantage on Strength checks, and your Speed increases by 10 feet. Once you use this trait, you can't use it again until you finish a Long Rest."
-                    }
+                    "name": "Large Form",
+                    "description": "Starting at character level 5, you can change your size to Large as a Bonus Action if you're in a big enough space. This transformation lasts for 10 minutes or until you end it (no action required). For that duration, you have Advantage on Strength checks, and your Speed increases by 10 feet. Once you use this trait, you can't use it again until you finish a Long Rest."
                 },
                 {
-                    "name": {
-                        "en": "Powerful Build",
-                        "es": "Complexión Poderosa"
-                    },
-                    "description": {
-                        "en": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity.",
-                        "es": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity."
-                    }
+                    "name": "Powerful Build",
+                    "description": "You have Advantage on any ability check you make to end the Grappled condition. You also count as one size larger when determining your carrying capacity."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Halfling [2024]",
-                "es": "Mediano [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Halfling [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "S",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Cherished and guided by gods who value life, home, and hearth, halflings gravitate toward bucolic havens where family and community help shape their lives. That said, many halflings possess a brave and adventurous spirit that leads them on journeys of discovery, affording them the chance to explore a bigger world and make new friends along the way. Their size -similar to that of a human child- helps them pass through crowds unnoticed and slip through tight spaces.\n\tAnyone who has spent time around halflings, particularly halfling adventurers, has likely witnessed the storied \"luck of the halflings\" in action. When a halfling is in mortal danger, an unseen force seems to intervene on the halfling's behalf. Many halflings believe in the power of luck, and they attribute their unusual gift to one or more of their benevolent gods, including Yondalla, Brandobaris, and Charmalaine. The same gift might contribute to their robust life spans (about 150 years).\n\tHalfling communities come in all varieties. For every sequestered shire tucked away in an unspoiled part of the world, there's a crime syndicate like the Boromar Clan in the Eberron setting or a territorial mob of halflings like those in the Dark Sun setting.\n\tHalflings who prefer to live underground are sometimes called strongheart halflings or stouts. Nomadic halflings, as well as those who live among humans and other tall folk. are sometimes called lightfoot halflings or tallfellows.",
-                        "es": "Cherished and guided by gods who value life, home, and hearth, halflings gravitate toward bucolic havens where family and community help shape their lives. That said, many halflings possess a brave and adventurous spirit that leads them on journeys of discovery, affording them the chance to explore a bigger world and make new friends along the way. Their size -similar to that of a human child- helps them pass through crowds unnoticed and slip through tight spaces.\n\tAnyone who has spent time around halflings, particularly halfling adventurers, has likely witnessed the storied \"luck of the halflings\" in action. When a halfling is in mortal danger, an unseen force seems to intervene on the halfling's behalf. Many halflings believe in the power of luck, and they attribute their unusual gift to one or more of their benevolent gods, including Yondalla, Brandobaris, and Charmalaine. The same gift might contribute to their robust life spans (about 150 years).\n\tHalfling communities come in all varieties. For every sequestered shire tucked away in an unspoiled part of the world, there's a crime syndicate like the Boromar Clan in the Eberron setting or a territorial mob of halflings like those in the Dark Sun setting.\n\tHalflings who prefer to live underground are sometimes called strongheart halflings or stouts. Nomadic halflings, as well as those who live among humans and other tall folk. are sometimes called lightfoot halflings or tallfellows."
-                    }
+                    "name": "Description",
+                    "description": "Cherished and guided by gods who value life, home, and hearth, halflings gravitate toward bucolic havens where family and community help shape their lives. That said, many halflings possess a brave and adventurous spirit that leads them on journeys of discovery, affording them the chance to explore a bigger world and make new friends along the way. Their size -similar to that of a human child- helps them pass through crowds unnoticed and slip through tight spaces.\n\tAnyone who has spent time around halflings, particularly halfling adventurers, has likely witnessed the storied \"luck of the halflings\" in action. When a halfling is in mortal danger, an unseen force seems to intervene on the halfling's behalf. Many halflings believe in the power of luck, and they attribute their unusual gift to one or more of their benevolent gods, including Yondalla, Brandobaris, and Charmalaine. The same gift might contribute to their robust life spans (about 150 years).\n\tHalfling communities come in all varieties. For every sequestered shire tucked away in an unspoiled part of the world, there's a crime syndicate like the Boromar Clan in the Eberron setting or a territorial mob of halflings like those in the Dark Sun setting.\n\tHalflings who prefer to live underground are sometimes called strongheart halflings or stouts. Nomadic halflings, as well as those who live among humans and other tall folk. are sometimes called lightfoot halflings or tallfellows."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Small (about 2-3 feet tall)",
-                        "es": "Small (about 2-3 feet tall)"
-                    }
+                    "name": "Size",
+                    "description": "Small (about 2-3 feet tall)"
                 },
                 {
-                    "name": {
-                        "en": "Brave",
-                        "es": "Valiente"
-                    },
-                    "description": {
-                        "en": "You have Advantage on saving throws you make to avoid or end the Frightened condition.",
-                        "es": "You have Advantage on saving throws you make to avoid or end the Frightened condition."
-                    }
+                    "name": "Brave",
+                    "description": "You have Advantage on saving throws you make to avoid or end the Frightened condition."
                 },
                 {
-                    "name": {
-                        "en": "Halfling Nimbleness",
-                        "es": "Agilidad Mediana"
-                    },
-                    "description": {
-                        "en": "You can move through the space of any creature that is a size larger than you. but you can't stop in the same space.",
-                        "es": "You can move through the space of any creature that is a size larger than you. but you can't stop in the same space."
-                    }
+                    "name": "Halfling Nimbleness",
+                    "description": "You can move through the space of any creature that is a size larger than you. but you can't stop in the same space."
                 },
                 {
-                    "name": {
-                        "en": "Luck",
-                        "es": "Suerte"
-                    },
-                    "description": {
-                        "en": "When you roll a 1 on the d20 of a D20 Test. you can reroll the die, and you must use the new roll.",
-                        "es": "When you roll a 1 on the d20 of a D20 Test. you can reroll the die, and you must use the new roll."
-                    }
+                    "name": "Luck",
+                    "description": "When you roll a 1 on the d20 of a D20 Test. you can reroll the die, and you must use the new roll."
                 },
                 {
-                    "name": {
-                        "en": "Naturally Stealthy",
-                        "es": "Sigilo Natural"
-                    },
-                    "description": {
-                        "en": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you.",
-                        "es": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you."
-                    }
+                    "name": "Naturally Stealthy",
+                    "description": "You can take the Hide action even when you are obscured only by a creature that is at least one size larger than you."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Human [2024]",
-                "es": "Humano [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Human [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Found throughout the multiverse, humans are as varied as they are numerous, and they endeavor to achieve as much as they can in the years they are given. Their ambition and resourcefulness are commended, respected, and feared on many worlds.\n\tHumans are as diverse in appearance as the people of Earth, and they have many gods. Scholars dispute the origin of humanity, but one of the earliest known human gatherings is said to have occurred in Sigil, the torus-shaped city at the center of the multiverse and the place where the Common language was born. From there, humans could have spread to every part of the multiverse, bringing the City of Doors' cosmopolitanism with them.",
-                        "es": "Found throughout the multiverse, humans are as varied as they are numerous, and they endeavor to achieve as much as they can in the years they are given. Their ambition and resourcefulness are commended, respected, and feared on many worlds.\n\tHumans are as diverse in appearance as the people of Earth, and they have many gods. Scholars dispute the origin of humanity, but one of the earliest known human gatherings is said to have occurred in Sigil, the torus-shaped city at the center of the multiverse and the place where the Common language was born. From there, humans could have spread to every part of the multiverse, bringing the City of Doors' cosmopolitanism with them."
-                    }
+                    "name": "Description",
+                    "description": "Found throughout the multiverse, humans are as varied as they are numerous, and they endeavor to achieve as much as they can in the years they are given. Their ambition and resourcefulness are commended, respected, and feared on many worlds.\n\tHumans are as diverse in appearance as the people of Earth, and they have many gods. Scholars dispute the origin of humanity, but one of the earliest known human gatherings is said to have occurred in Sigil, the torus-shaped city at the center of the multiverse and the place where the Common language was born. From there, humans could have spread to every part of the multiverse, bringing the City of Doors' cosmopolitanism with them."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Humans can be Medium (about 4-7 feet tall) or Small (about 2-4 feet tall).",
-                        "es": "Humans can be Medium (about 4-7 feet tall) or Small (about 2-4 feet tall)."
-                    },
+                    "name": "Size",
+                    "description": "Humans can be Medium (about 4-7 feet tall) or Small (about 2-4 feet tall).",
                     "options": [
                         {
-                            "name": {
-                                "en": "Medium",
-                                "es": "Medium"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Medium",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Small",
-                                "es": "Small"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Small",
+                            "description": "N/A"
                         }
                     ]
                 },
                 {
-                    "name": {
-                        "en": "Resourceful",
-                        "es": "Ingenioso"
-                    },
-                    "description": {
-                        "en": "You gain Heroic Inspiration whenever you finish a Long Rest.",
-                        "es": "You gain Heroic Inspiration whenever you finish a Long Rest."
-                    }
+                    "name": "Resourceful",
+                    "description": "You gain Heroic Inspiration whenever you finish a Long Rest."
                 },
                 {
-                    "name": {
-                        "en": "Skillful",
-                        "es": "Hábil"
-                    },
-                    "description": {
-                        "en": "You gain proficiency in one skill of your choice.",
-                        "es": "You gain proficiency in one skill of your choice."
-                    }
+                    "name": "Skillful",
+                    "description": "You gain proficiency in one skill of your choice."
                 },
                 {
-                    "name": {
-                        "en": "Versatile",
-                        "es": "Versátil"
-                    },
-                    "description": {
-                        "en": "You gain an Origin feat of your choice (see chapter 5). Skilled is recommended.",
-                        "es": "You gain an Origin feat of your choice (see chapter 5). Skilled is recommended."
-                    }
+                    "name": "Versatile",
+                    "description": "You gain an Origin feat of your choice (see chapter 5). Skilled is recommended."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Orc [2024]",
-                "es": "Orco [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Orc [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Ores trace their creation to Gruumsh, a powerful god who roamed the wide open spaces of the Material Plane. Gruumsh equipped his children with gifts to help them wander great plains, vast caverns, and churning seas and to face the monsters that lurk there. Even when they turn their devotion to other gods, ores retain Gruumsh's gifts: endurance, determination, and the ability to see in darkness.\n\tOres are, on average, tall and broad. They have gray skin, ears that are sharply pointed, and prominent lower canines that resemble small tusks. Ore youths on some worlds are told about their ancestors' great travels and travails. Inspired by those tales, many of those ores wonder when Gruumsh will call on them to match the heroic deeds of old and if they will prove worthy of his favor. Other ores are happy to leave old tales in the past and find their own way.",
-                        "es": "Ores trace their creation to Gruumsh, a powerful god who roamed the wide open spaces of the Material Plane. Gruumsh equipped his children with gifts to help them wander great plains, vast caverns, and churning seas and to face the monsters that lurk there. Even when they turn their devotion to other gods, ores retain Gruumsh's gifts: endurance, determination, and the ability to see in darkness.\n\tOres are, on average, tall and broad. They have gray skin, ears that are sharply pointed, and prominent lower canines that resemble small tusks. Ore youths on some worlds are told about their ancestors' great travels and travails. Inspired by those tales, many of those ores wonder when Gruumsh will call on them to match the heroic deeds of old and if they will prove worthy of his favor. Other ores are happy to leave old tales in the past and find their own way."
-                    }
+                    "name": "Description",
+                    "description": "Ores trace their creation to Gruumsh, a powerful god who roamed the wide open spaces of the Material Plane. Gruumsh equipped his children with gifts to help them wander great plains, vast caverns, and churning seas and to face the monsters that lurk there. Even when they turn their devotion to other gods, ores retain Gruumsh's gifts: endurance, determination, and the ability to see in darkness.\n\tOres are, on average, tall and broad. They have gray skin, ears that are sharply pointed, and prominent lower canines that resemble small tusks. Ore youths on some worlds are told about their ancestors' great travels and travails. Inspired by those tales, many of those ores wonder when Gruumsh will call on them to match the heroic deeds of old and if they will prove worthy of his favor. Other ores are happy to leave old tales in the past and find their own way."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Medium (about 6-7 feet tall)",
-                        "es": "Medium (about 6-7 feet tall)"
-                    }
+                    "name": "Size",
+                    "description": "Medium (about 6-7 feet tall)"
                 },
                 {
-                    "name": {
-                        "en": "Adrenaline Rush",
-                        "es": "Oleada de Adrenalina"
-                    },
-                    "description": {
-                        "en": "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus.",
-                        "es": "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus."
-                    }
+                    "name": "Adrenaline Rush",
+                    "description": "You can take the Dash action as a Bonus Action. When you do so, you gain a number of Temporary Hit Points equal to your Proficiency Bonus."
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 120 feet.",
-                        "es": "You have Darkvision with a range of 120 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 120 feet."
                 },
                 {
-                    "name": {
-                        "en": "Relentless Endurance",
-                        "es": "Aguante Implacable"
-                    },
-                    "description": {
-                        "en": "When you are reduced to 0 Hit Points but not killed outright. you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest.",
-                        "es": "When you are reduced to 0 Hit Points but not killed outright. you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest."
-                    }
+                    "name": "Relentless Endurance",
+                    "description": "When you are reduced to 0 Hit Points but not killed outright. you can drop to 1 Hit Point instead. Once you use this trait, you can't do so again until you finish a Long Rest."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Tiefling, Abyssal [2024]",
-                "es": "Tiefling, Abisal [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Tiefling, Abyssal [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling (pronounced TEE-fling) is linked by blood to a devil, a demon, or some other Fiend. This connection to the Lower Planes is the tiefling's fiendish legacy, which comes with the promise of power yet has no effect on the tiefling's moral outlook.\n\nThe entropy of the Abyss, the chaos of Pandemonium, and the despair of Carceri call to tieflings who have the abyssal legacy. Horns, fur, tusks, and peculiar scents are common physical features of such tieflings, most of whom have the blood of demons coursing through their veins.",
-                        "es": "Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling (pronounced TEE-fling) is linked by blood to a devil, a demon, or some other Fiend. This connection to the Lower Planes is the tiefling's fiendish legacy, which comes with the promise of power yet has no effect on the tiefling's moral outlook.\n\nThe entropy of the Abyss, the chaos of Pandemonium, and the despair of Carceri call to tieflings who have the abyssal legacy. Horns, fur, tusks, and peculiar scents are common physical features of such tieflings, most of whom have the blood of demons coursing through their veins."
-                    }
+                    "name": "Description",
+                    "description": "Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling (pronounced TEE-fling) is linked by blood to a devil, a demon, or some other Fiend. This connection to the Lower Planes is the tiefling's fiendish legacy, which comes with the promise of power yet has no effect on the tiefling's moral outlook.\n\nThe entropy of the Abyss, the chaos of Pandemonium, and the despair of Carceri call to tieflings who have the abyssal legacy. Horns, fur, tusks, and peculiar scents are common physical features of such tieflings, most of whom have the blood of demons coursing through their veins."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Tieflings can be Medium (about 4-7 feet tall) or Small (about 3-4 feet tall).",
-                        "es": "Tieflings can be Medium (about 4-7 feet tall) or Small (about 3-4 feet tall)."
-                    },
+                    "name": "Size",
+                    "description": "Tieflings can be Medium (about 4-7 feet tall) or Small (about 3-4 feet tall).",
                     "options": [
                         {
-                            "name": {
-                                "en": "Medium",
-                                "es": "Medium"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Medium",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Small",
-                                "es": "Small"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Small",
+                            "description": "N/A"
                         }
                     ]
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 60 feet.",
-                        "es": "You have Darkvision with a range of 60 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 60 feet."
                 },
                 {
-                    "name": {
-                        "en": "Fiendish Legacy (Abyssal)",
-                        "es": "Legado Demoníaco (Abisal)"
-                    },
-                    "description": {
-                        "en": "You have Resistance to Poison damage. You also know the Poison Spray cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).",
-                        "es": "You have Resistance to Poison damage. You also know the Poison Spray cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy)."
-                    }
+                    "name": "Fiendish Legacy (Abyssal)",
+                    "description": "You have Resistance to Poison damage. You also know the Poison Spray cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy)."
                 },
                 {
-                    "name": {
-                        "en": "Otherworldly Presence",
-                        "es": "Presencia de otro Mundo"
-                    },
-                    "description": {
-                        "en": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.",
-                        "es": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait."
-                    }
+                    "name": "Otherworldly Presence",
+                    "description": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Tiefling, Chthonic [2024]",
-                "es": "Tiefling, Chtónico [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Tiefling, Chthonic [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling (pronounced TEE-fling) is linked by blood to a devil, a demon, or some other Fiend. This connection to the Lower Planes is the tiefling's fiendish legacy, which comes with the promise of power yet has no effect on the tiefling's moral outlook.\n\nTieflings who have the chthonic legacy feel not only the tug of Carceri but also the greed of Gehenna and the gloom of Hades. Some of these tieflings look cadaverous. Others possess the unearthly beauty of a succubus, or they have physical features in common with a night hag, a yugoloth, or some other Neutral Evil fiendish ancestor.",
-                        "es": "Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling (pronounced TEE-fling) is linked by blood to a devil, a demon, or some other Fiend. This connection to the Lower Planes is the tiefling's fiendish legacy, which comes with the promise of power yet has no effect on the tiefling's moral outlook.\n\nTieflings who have the chthonic legacy feel not only the tug of Carceri but also the greed of Gehenna and the gloom of Hades. Some of these tieflings look cadaverous. Others possess the unearthly beauty of a succubus, or they have physical features in common with a night hag, a yugoloth, or some other Neutral Evil fiendish ancestor."
-                    }
+                    "name": "Description",
+                    "description": "Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling (pronounced TEE-fling) is linked by blood to a devil, a demon, or some other Fiend. This connection to the Lower Planes is the tiefling's fiendish legacy, which comes with the promise of power yet has no effect on the tiefling's moral outlook.\n\nTieflings who have the chthonic legacy feel not only the tug of Carceri but also the greed of Gehenna and the gloom of Hades. Some of these tieflings look cadaverous. Others possess the unearthly beauty of a succubus, or they have physical features in common with a night hag, a yugoloth, or some other Neutral Evil fiendish ancestor."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Tieflings can be Medium (about 4-7 feet tall) or Small (about 3-4 feet tall).",
-                        "es": "Tieflings can be Medium (about 4-7 feet tall) or Small (about 3-4 feet tall)."
-                    },
+                    "name": "Size",
+                    "description": "Tieflings can be Medium (about 4-7 feet tall) or Small (about 3-4 feet tall).",
                     "options": [
                         {
-                            "name": {
-                                "en": "Medium",
-                                "es": "Medium"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Medium",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Small",
-                                "es": "Small"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Small",
+                            "description": "N/A"
                         }
                     ]
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 60 feet.",
-                        "es": "You have Darkvision with a range of 60 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 60 feet."
                 },
                 {
-                    "name": {
-                        "en": "Fiendish Legacy (Chthonic)",
-                        "es": "Legado Demoníaco (Chtónico)"
-                    },
-                    "description": {
-                        "en": "You have Resistance to Necrotic damage. You also know the Chill Touch cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).",
-                        "es": "You have Resistance to Necrotic damage. You also know the Chill Touch cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy)."
-                    }
+                    "name": "Fiendish Legacy (Chthonic)",
+                    "description": "You have Resistance to Necrotic damage. You also know the Chill Touch cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy)."
                 },
                 {
-                    "name": {
-                        "en": "Otherworldly Presence",
-                        "es": "Presencia de otro Mundo"
-                    },
-                    "description": {
-                        "en": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.",
-                        "es": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait."
-                    }
+                    "name": "Otherworldly Presence",
+                    "description": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait."
                 }
             ]
         },
         {
-            "name": {
-                "en": "Tiefling, Infernal [2024]",
-                "es": "Tiefling, Infernal [2024]"
-            },
-            "source": {
-                "en": "Player's Handbook 2024",
-                "es": "Player's Handbook 2024"
-            },
+            "name": "Tiefling, Infernal [2024]",
+            "source": "Player's Handbook 2024",
             "size_summary": "M",
             "speed": "30",
             "traits": [
                 {
-                    "name": {
-                        "en": "Description",
-                        "es": "Descripción"
-                    },
-                    "description": {
-                        "en": "Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling (pronounced TEE-fling) is linked by blood to a devil, a demon, or some other Fiend. This connection to the Lower Planes is the tiefling's fiendish legacy, which comes with the promise of power yet has no effect on the tiefling's moral outlook.\n\nThe infernal legacy connects tieflings not only to Gehenna but also the Nine Hells and the raging battlefields of Acheron. Horns, spines, tails, golden eyes, and a faint odor of sulfur or smoke are common physical features of such tieflings, most of whom trace their ancestry to devils.",
-                        "es": "Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling (pronounced TEE-fling) is linked by blood to a devil, a demon, or some other Fiend. This connection to the Lower Planes is the tiefling's fiendish legacy, which comes with the promise of power yet has no effect on the tiefling's moral outlook.\n\nThe infernal legacy connects tieflings not only to Gehenna but also the Nine Hells and the raging battlefields of Acheron. Horns, spines, tails, golden eyes, and a faint odor of sulfur or smoke are common physical features of such tieflings, most of whom trace their ancestry to devils."
-                    }
+                    "name": "Description",
+                    "description": "Tieflings are either born in the Lower Planes or have fiendish ancestors who originated there. A tiefling (pronounced TEE-fling) is linked by blood to a devil, a demon, or some other Fiend. This connection to the Lower Planes is the tiefling's fiendish legacy, which comes with the promise of power yet has no effect on the tiefling's moral outlook.\n\nThe infernal legacy connects tieflings not only to Gehenna but also the Nine Hells and the raging battlefields of Acheron. Horns, spines, tails, golden eyes, and a faint odor of sulfur or smoke are common physical features of such tieflings, most of whom trace their ancestry to devils."
                 },
                 {
-                    "name": {
-                        "en": "Creature Type",
-                        "es": "Tipo de Criatura"
-                    },
-                    "description": {
-                        "en": "Humanoid",
-                        "es": "Humanoid"
-                    }
+                    "name": "Creature Type",
+                    "description": "Humanoid"
                 },
                 {
-                    "name": {
-                        "en": "Size",
-                        "es": "Tamaño"
-                    },
-                    "description": {
-                        "en": "Tieflings can be Medium (about 4-7 feet tall) or Small (about 3-4 feet tall).",
-                        "es": "Tieflings can be Medium (about 4-7 feet tall) or Small (about 3-4 feet tall)."
-                    },
+                    "name": "Size",
+                    "description": "Tieflings can be Medium (about 4-7 feet tall) or Small (about 3-4 feet tall).",
                     "options": [
                         {
-                            "name": {
-                                "en": "Medium",
-                                "es": "Medium"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Medium",
+                            "description": "N/A"
                         },
                         {
-                            "name": {
-                                "en": "Small",
-                                "es": "Small"
-                            },
-                            "description": {
-                                "en": "N/A",
-                                "es": "N/A"
-                            }
+                            "name": "Small",
+                            "description": "N/A"
                         }
                     ]
                 },
                 {
-                    "name": {
-                        "en": "Darkvision",
-                        "es": "Visión en la Oscuridad"
-                    },
-                    "description": {
-                        "en": "You have Darkvision with a range of 60 feet.",
-                        "es": "You have Darkvision with a range of 60 feet."
-                    }
+                    "name": "Darkvision",
+                    "description": "You have Darkvision with a range of 60 feet."
                 },
                 {
-                    "name": {
-                        "en": "Fiendish Legacy (Infernal)",
-                        "es": "Legado Demoníaco (Infernal)"
-                    },
-                    "description": {
-                        "en": "You have Resistance to Fire damage. You also know the Fire Bolt cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy).",
-                        "es": "You have Resistance to Fire damage. You also know the Fire Bolt cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy)."
-                    }
+                    "name": "Fiendish Legacy (Infernal)",
+                    "description": "You have Resistance to Fire damage. You also know the Fire Bolt cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select the legacy)."
                 },
                 {
-                    "name": {
-                        "en": "Otherworldly Presence",
-                        "es": "Presencia de otro Mundo"
-                    },
-                    "description": {
-                        "en": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait.",
-                        "es": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait."
-                    }
+                    "name": "Otherworldly Presence",
+                    "description": "You know the Thaumaturgy cantrip. When you cast it with this trait, the spell uses the same spellcasting ability you use for your Fiendish Legacy trait."
                 }
             ]
         }
