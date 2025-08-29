@@ -184,24 +184,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (Array.isArray(prerequisite)) {
             return prerequisite.map(p => parsePrerequisite(p)).join(', ');
         }
-        if (typeof prerequisite === 'object') {
-            let parts = [];
-            for (const key in prerequisite) {
-                if (prerequisite.hasOwnProperty(key)) {
-                    if (key === 'level') {
-                        parts.push(`Level ${prerequisite[key].level}+`);
-                    } else if (key === 'spell') {
-                        parts.push(`Spell: ${prerequisite[key][0].entry}`);
-                    } else if (key === 'item') {
-                        parts.push(`Item: ${prerequisite[key].join(', ')}`);
-                    }
-                }
-            }
-            return parts.join(', ');
+        if (typeof prerequisite === 'object' && prerequisite.name) {
+            return `<strong>${prerequisite.name}</strong>`;
         }
-        return prerequisite;
+        if (typeof prerequisite === 'string') {
+            return prerequisite;
+        }
+        return '';
     }
-
+    
     function cleanEntryText(text) {
         if (typeof text !== 'string') return text;
         
@@ -223,44 +214,30 @@ document.addEventListener('DOMContentLoaded', () => {
         if (item.prerequisite) {
             const prerequisiteElement = document.createElement('div');
             prerequisiteElement.className = 'detail-item';
-            prerequisiteElement.innerHTML = `<h3>${labels.prerequisite}</h3><p>${parsePrerequisite(item.prerequisite)}</p>`;
+            const parsedPrerequisite = cleanEntryText(JSON.stringify(item.prerequisite));
+            prerequisiteElement.innerHTML = `<h3>${labels.prerequisite}</h3><p>${parsedPrerequisite}</p>`;
             detailContainer.appendChild(prerequisiteElement);
         }
     
         if (item.entries && Array.isArray(item.entries)) {
-            const entriesContainer = document.createElement('div');
-            entriesContainer.className = 'detail-item';
-            entriesContainer.innerHTML = `<h3>${labels.entries}</h3>`;
-
             item.entries.forEach(entry => {
+                const entryElement = document.createElement('div');
+                entryElement.className = 'detail-item';
+                let entryText = '';
+
                 if (typeof entry === 'string') {
-                    entriesContainer.innerHTML += `<p>${cleanEntryText(entry)}</p>`;
-                } else if (typeof entry === 'object' && entry !== null) {
-                    if (entry.name && entry.entries) {
-                        entriesContainer.innerHTML += `<h4>${cleanEntryText(entry.name)}</h4>`;
-                        if (Array.isArray(entry.entries)) {
-                            entriesContainer.innerHTML += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
-                        } else {
-                            entriesContainer.innerHTML += `<p>${cleanEntryText(entry.entries)}</p>`;
-                        }
-                    } else if (entry.entries && Array.isArray(entry.entries)) {
-                        entriesContainer.innerHTML += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
-                    } else if (entry.type === 'table') {
-                        // Manejar tablas
-                        let tableHtml = `<table class="detail-table"><thead><tr>`;
-                        entry.colLabels.forEach(label => tableHtml += `<th>${label}</th>`);
-                        tableHtml += `</tr></thead><tbody>`;
-                        entry.rows.forEach(row => {
-                            tableHtml += `<tr>`;
-                            row.forEach(cell => tableHtml += `<td>${cleanEntryText(cell)}</td>`);
-                            tableHtml += `</tr>`;
-                        });
-                        tableHtml += `</tbody></table>`;
-                        entriesContainer.innerHTML += tableHtml;
+                    entryText += `<p>${cleanEntryText(entry)}</p>`;
+                } else if (entry.name && entry.entries) {
+                    entryText += `<h3>${cleanEntryText(entry.name)}</h3>`;
+                    if (Array.isArray(entry.entries)) {
+                        entryText += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
+                    } else if (typeof entry.entries === 'string') {
+                        entryText += `<p>${cleanEntryText(entry.entries)}</p>`;
                     }
                 }
+                entryElement.innerHTML = entryText;
+                detailContainer.appendChild(entryElement);
             });
-            detailContainer.appendChild(entriesContainer);
         }
     
         if (item.source || item.page) {
