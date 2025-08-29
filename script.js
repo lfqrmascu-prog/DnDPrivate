@@ -179,16 +179,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    function cleanEntryText(text) {
+        if (typeof text !== 'string') return text;
+        
+        return text.replace(/{@(.*?)}/g, (match, p1) => {
+            const parts = p1.split('|');
+            const tag = parts[0].toLowerCase();
+            const textToDisplay = parts[1] || parts[0];
+            const dataAttrs = `data-tag="${tag}" data-name="${textToDisplay}"`;
+
+            return `<span class="detail-link" ${dataAttrs}>${textToDisplay}</span>`;
+        });
+    }
+
     function showDetail(item) {
         showScreen('detail-screen');
         detailTitle.textContent = item.name;
         detailContainer.innerHTML = '';
 
-        // Mapeo para mostrar títulos en negrita
         const lang = translations[currentLang];
         const labels = lang.detailLabels;
 
-        // Muestra los prerequisitos si existen
         if (item.prerequisite) {
             const prerequisiteElement = document.createElement('div');
             prerequisiteElement.className = 'detail-item';
@@ -199,7 +210,6 @@ document.addEventListener('DOMContentLoaded', () => {
             detailContainer.appendChild(prerequisiteElement);
         }
 
-        // Muestra el texto principal
         if (item.entries && Array.isArray(item.entries)) {
             item.entries.forEach(entry => {
                 const entryElement = document.createElement('div');
@@ -223,7 +233,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Muestra la fuente
         if (item.source || item.page) {
             const sourceElement = document.createElement('div');
             sourceElement.className = 'detail-item';
@@ -237,13 +246,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!item.prerequisite && !item.entries && !item.source) {
             detailContainer.innerHTML = `<p>No se encontraron detalles para ${item.name}.</p>`;
         }
-    }
-
-    function cleanEntryText(text) {
-        if (typeof text !== 'string') return text;
-        
-        // Reemplaza los códigos de formato del JSON con HTML
-        return text.replace(/{@filter\s+([^|}]+)[^}]*}/g, (match, p1) => `<span class="filter-link" data-filter="${p1.trim()}">${p1.trim()}</span>`);
+    
+        // Añadir evento de clic a los nuevos enlaces
+        detailContainer.querySelectorAll('.detail-link').forEach(link => {
+            link.addEventListener('click', (event) => {
+                // Aquí iría la lógica para buscar y mostrar el nuevo item
+                const tag = event.target.dataset.tag;
+                const name = event.target.dataset.name;
+                // Por ahora, solo lo mostraremos en la consola para no dañar el flujo de la aplicación
+                console.log(`Clic en un enlace: Tag=${tag}, Nombre=${name}`);
+                // Implementaremos la lógica de búsqueda en el siguiente paso
+            });
+        });
     }
 
     function filterContent() {
