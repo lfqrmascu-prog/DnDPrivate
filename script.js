@@ -180,18 +180,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function parsePrerequisite(prerequisite) {
+        if (!prerequisite) return '';
         if (Array.isArray(prerequisite)) {
             return prerequisite.map(p => parsePrerequisite(p)).join(', ');
-        } else if (typeof prerequisite === 'object' && prerequisite !== null) {
+        }
+        if (typeof prerequisite === 'object') {
             let parts = [];
             for (const key in prerequisite) {
                 if (prerequisite.hasOwnProperty(key)) {
-                    if (Array.isArray(prerequisite[key])) {
-                        parts.push(`${key}: ${prerequisite[key].map(item => item.name || item.entry || item).join(', ')}`);
-                    } else if (prerequisite[key].name) {
-                        parts.push(`${key}: ${prerequisite[key].name}`);
-                    } else if (prerequisite[key].entry) {
-                        parts.push(`${key}: ${prerequisite[key].entry}`);
+                    if (key === 'level') {
+                        parts.push(`Level ${prerequisite[key].level}+`);
+                    } else if (key === 'spell') {
+                        parts.push(`Spell: ${prerequisite[key][0].entry}`);
+                    } else if (key === 'item') {
+                        parts.push(`Item: ${prerequisite[key].join(', ')}`);
                     }
                 }
             }
@@ -226,24 +228,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     
         if (item.entries && Array.isArray(item.entries)) {
-            item.entries.forEach(entry => {
-                const entryElement = document.createElement('div');
-                entryElement.className = 'detail-item';
-                let entryText = '';
+            const entriesContainer = document.createElement('div');
+            entriesContainer.className = 'detail-item';
+            entriesContainer.innerHTML = `<h3>${labels.entries}</h3>`;
 
+            item.entries.forEach(entry => {
                 if (typeof entry === 'string') {
-                    entryText += `<p>${cleanEntryText(entry)}</p>`;
-                } else if (entry.name && entry.entries) {
-                    entryText += `<h3>${cleanEntryText(entry.name)}</h3>`;
-                    if (Array.isArray(entry.entries)) {
-                        entryText += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
-                    } else if (typeof entry.entries === 'string') {
-                        entryText += `<p>${cleanEntryText(entry.entries)}</p>`;
+                    entriesContainer.innerHTML += `<p>${cleanEntryText(entry)}</p>`;
+                } else if (typeof entry === 'object' && entry !== null) {
+                    if (entry.name && entry.entries) {
+                        entriesContainer.innerHTML += `<h4>${cleanEntryText(entry.name)}</h4>`;
+                        if (Array.isArray(entry.entries)) {
+                            entriesContainer.innerHTML += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
+                        } else {
+                            entriesContainer.innerHTML += `<p>${cleanEntryText(entry.entries)}</p>`;
+                        }
+                    } else if (entry.entries && Array.isArray(entry.entries)) {
+                        entriesContainer.innerHTML += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
+                    } else if (entry.type === 'table') {
+                        // Manejar tablas
+                        let tableHtml = `<table class="detail-table"><thead><tr>`;
+                        entry.colLabels.forEach(label => tableHtml += `<th>${label}</th>`);
+                        tableHtml += `</tr></thead><tbody>`;
+                        entry.rows.forEach(row => {
+                            tableHtml += `<tr>`;
+                            row.forEach(cell => tableHtml += `<td>${cleanEntryText(cell)}</td>`);
+                            tableHtml += `</tr>`;
+                        });
+                        tableHtml += `</tbody></table>`;
+                        entriesContainer.innerHTML += tableHtml;
                     }
                 }
-                entryElement.innerHTML = entryText;
-                detailContainer.appendChild(entryElement);
             });
+            detailContainer.appendChild(entriesContainer);
         }
     
         if (item.source || item.page) {
