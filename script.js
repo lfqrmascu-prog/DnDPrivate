@@ -23,14 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuBtns = document.querySelectorAll('.menu-btn');
     const contentListContainer = document.getElementById('content-list-container');
     const contentFilterInput = document.getElementById('content-filter-input');
-    const filterPhb24Btn = document.getElementById('filter-phb24-btn');
     const detailContainer = document.getElementById('detail-container');
     
     // --- Variables de estado de la aplicación ---
     let currentLang = 'en';
     let allContent = [];
     let currentDataType = '';
-    
+
     // --- URL base de tu repositorio en GitHub ---
     const baseUrl = 'https://raw.githubusercontent.com/lfqrmascu-prog/DnDPrivate/main/data/';
 
@@ -62,7 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
             flagSrc: "assets/es-flag.png",
             flagAlt: "Switch to Spanish",
             filterPlaceholder: (type) => `Filter ${type}...`,
-            noResults: "No results found."
+            noResults: "No results found.",
+            detailLabels: {
+                prerequisite: "Prerequisites",
+                source: "Source",
+                page: "Page",
+                entries: "Entries",
+            }
         },
         es: {
             titles: { welcome: "¡Bienvenido<br>Aventurero!", search: "Buscar", detail: "Detalle" },
@@ -79,7 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
             flagSrc: "assets/en-flag.png",
             flagAlt: "Switch to English",
             filterPlaceholder: (type) => `Filtrar ${type}...`,
-            noResults: "No se encontraron resultados."
+            noResults: "No se encontraron resultados.",
+            detailLabels: {
+                prerequisite: "Requisitos",
+                source: "Fuente",
+                page: "Página",
+                entries: "Entradas",
+            }
         }
     };
     
@@ -173,35 +184,66 @@ document.addEventListener('DOMContentLoaded', () => {
         detailTitle.textContent = item.name;
         detailContainer.innerHTML = '';
 
+        // Mapeo para mostrar títulos en negrita
+        const lang = translations[currentLang];
+        const labels = lang.detailLabels;
+
+        // Muestra los prerequisitos si existen
+        if (item.prerequisite) {
+            const prerequisiteElement = document.createElement('div');
+            prerequisiteElement.className = 'detail-item';
+            prerequisiteElement.innerHTML = `
+                <h3>${labels.prerequisite}</h3>
+                <p>${cleanEntryText(JSON.stringify(item.prerequisite))}</p>
+            `;
+            detailContainer.appendChild(prerequisiteElement);
+        }
+
+        // Muestra el texto principal
         if (item.entries && Array.isArray(item.entries)) {
             item.entries.forEach(entry => {
                 const entryElement = document.createElement('div');
                 entryElement.className = 'detail-item';
                 let entryText = '';
 
-                // Verifica si la entrada es un objeto con nombre y entradas
-                if (entry.name && entry.entries) {
+                if (entry.name) {
                     entryText += `<h3>${entry.name}</h3>`;
-                    if (Array.isArray(entry.entries)) {
-                        entryText += entry.entries.map(e => `<p>${e}</p>`).join('');
-                    } else if (typeof entry.entries === 'string') {
-                        entryText += `<p>${entry.entries}</p>`;
-                    }
-                } 
-                // Maneja el caso de que la entrada sea solo una cadena de texto
-                else if (typeof entry === 'string') {
-                    entryText += `<p>${entry}</p>`;
                 }
-                
-                // Muestra el contenido del elemento
+
+                if (entry.entries && Array.isArray(entry.entries)) {
+                    entryText += entry.entries.map(e => `<p>${cleanEntryText(e)}</p>`).join('');
+                } else if (typeof entry.entries === 'string') {
+                    entryText += `<p>${cleanEntryText(entry.entries)}</p>`;
+                } else if (typeof entry === 'string') {
+                    entryText += `<p>${cleanEntryText(entry)}</p>`;
+                }
+
                 entryElement.innerHTML = entryText;
                 detailContainer.appendChild(entryElement);
             });
         }
-        // Maneja el caso de que no haya entradas
-        else {
+
+        // Muestra la fuente
+        if (item.source || item.page) {
+            const sourceElement = document.createElement('div');
+            sourceElement.className = 'detail-item';
+            sourceElement.innerHTML = `
+                <h3>${labels.source}</h3>
+                <p>${item.source || 'N/A'}${item.page ? `, ${labels.page}: ${item.page}` : ''}</p>
+            `;
+            detailContainer.appendChild(sourceElement);
+        }
+    
+        if (!item.prerequisite && !item.entries && !item.source) {
             detailContainer.innerHTML = `<p>No se encontraron detalles para ${item.name}.</p>`;
         }
+    }
+
+    function cleanEntryText(text) {
+        if (typeof text !== 'string') return text;
+        
+        // Reemplaza los códigos de formato del JSON con HTML
+        return text.replace(/{@filter\s+([^|}]+)[^}]*}/g, (match, p1) => `<span class="filter-link" data-filter="${p1.trim()}">${p1.trim()}</span>`);
     }
 
     function filterContent() {
