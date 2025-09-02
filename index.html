@@ -1,92 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D&D 5e App</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <title>D&D - Búsqueda Unificada</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <section id="welcome-screen" class="screen active">
-        <main class="welcome-screen-content">
-            <h1 id="welcome-title">Welcome<br>Adventurer!</h1>
-            <div class="menu-container">
-                <div class="menu-options">
-                    <button id="search-btn">Search</button>
-                    <button id="create-btn">Create Character</button>
-                    <button id="manage-btn">Manage Characters</button>
-                </div>
-                <button id="language-btn-welcome" class="language-btn-style">
-                    <img src="assets/es-flag.png" alt="Switch to Spanish" id="flag-img-welcome">
-                </button>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-gem logo-icon"></i> <span class="app-title">D&D Referencia</span>
             </div>
-        </main>
-    </section>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-input" placeholder="Buscar hechizos, monstruos, reglas...">
+            </div>
 
-    <section id="search-screen" class="screen">
-        <main class="search-screen-content">
-            <h1 id="search-title">Search</h1>
-            <div class="menu-sections">
-                <section class="menu-section">
-                    <h2>Players</h2>
-                    <div class="menu-grid">
-                        <button class="menu-btn" data-lang="races" data-display-name="Species">Species</button>
-                        <button class="menu-btn" data-lang="classes" data-display-name="Classes">Classes</button>
-                        <button class="menu-btn" data-lang="feats" data-display-name="Feats">Feats</button>
-                        <button class="menu-btn" data-lang="options-features" data-display-name="Options & Features">Options & Features</button>
-                        <button class="menu-btn" data-lang="backgrounds" data-display-name="Backgrounds">Backgrounds</button>
-                        <button class="menu-btn" data-lang="items" data-display-name="Items">Items</button>
-                        <button class="menu-btn" data-lang="spells-phb" data-display-name="Spells">Spells</button>
-                    </div>
-                </section>
-                <section class="menu-section">
-                    <h2>Rules</h2>
-                    <div class="menu-grid">
-                        <button class="menu-btn" data-lang="adventures" data-display-name="Adventures">Adventures</button>
-                        <button class="menu-btn" data-lang="books" data-display-name="Books">Books</button>
-                        <button class="menu-btn" data-lang="rules-glossary" data-display-name="Rules Glossary">Rules Glossary</button>
-                        <button class="menu-btn" data-lang="conditions" data-display-name="Conditions">Conditions</button>
-                    </div>
-                </section>
-                <section class="menu-section">
-                    <h2>Dungeon Masters</h2>
-                    <div class="menu-grid">
-                        <button class="menu-btn" data-lang="dm-options" data-display-name="DM Options">DM Options</button>
-                    </div>
-                </section>
-            </div>
-            <button id="back-btn">Back</button>
-            <button id="language-btn-search" class="language-btn-style">
-                <img src="assets/es-flag.png" alt="Switch to Spanish" id="flag-img-search">
-            </button>
-        </main>
-    </section>
-    
-    <section id="content-screen" class="screen">
-        <main class="content-screen-content">
-            <button id="back-to-search-btn" class="back-btn">Back to Search</button>
-            <h1 id="content-title" class="section-title">Content</h1>
-            <div class="filter-container">
-                <input type="text" id="content-filter-input" placeholder="Filter content...">
-                <button id="filter-phb24-btn">Filter PHB'24</button>
-            </div>
-            <div id="content-list-container" class="list-container">
-                </div>
-        </main>
-    </section>
+            <nav class="sidebar-nav" id="sidebar-nav">
+                </nav>
+        </aside>
 
-    <section id="detail-screen" class="screen">
-        <main class="detail-screen-content">
-            <button id="back-to-content-btn" class="back-btn">Back</button>
-            <h1 id="detail-title" class="section-title">Detail</h1>
-            <div id="detail-container">
-                </div>
+        <main class="main-content">
+            <div class="content-header">
+                <h1 id="content-title">Bienvenido</h1>
+            </div>
+            <div class="content-body" id="content-display">
+                <p>Usa la barra de búsqueda para encontrar información o selecciona una opción del menú.</p>
+            </div>
         </main>
-    </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
